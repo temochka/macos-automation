@@ -1,6 +1,12 @@
 # macOS automation scripts
 
-A collection of my macOS automation scripts (AppleScript and JXA).
+A collection of my macOS automation scripts (Alfred workflows, AppleScript and JXA).
+
+## Alfred
+
+### GitHub Bookmarks
+
+An Alfred workflow to quickly jump to any of your GitHub repositories, private or public. Requires `jq` (`brew install jq`) and a GitHub account.
 
 ## Mail
 
