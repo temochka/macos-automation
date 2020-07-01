@@ -1,6 +1,10 @@
 # macOS automation scripts
 
-A collection of my macOS automation scripts (Alfred workflows, AppleScript and JXA).
+A collection of my macOS automation scripts (Alfred workflows, AppleScript and JXA). To compile, run:
+
+``` bash
+make all
+```
 
 ## Alfred
 
