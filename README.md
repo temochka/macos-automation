@@ -8,9 +8,20 @@ make all
 
 ## Alfred
 
+### Browser Hotkey
+
+Press ⌘+⇧+B to launch the default browser from anywhere. This is especially useful if you use different browsers on different computers.
+
 ### GitHub Bookmarks
 
 An Alfred workflow to quickly jump to any of your GitHub repositories, private or public. Requires `jq` (`brew install jq`) and a GitHub account.
+
+* Use `gh` keyword to fuzzy-search GitHub repo you have access to.
+* Use `gh-refresh` keyword to periodically refresh the cached repository list.
+
+### Rubygems
+
+* Use `gem` keyword to look up gems on rubygems.org
 
 ## Mail
 
