@@ -21,7 +21,7 @@ do
     curl -s -L -H "User-Agent: temochka" -H "Authorization: token ${GITHUB_TOKEN}" "https://api.github.com/user/repos?page=${page_num}" |
       jq -j 'map({
         title: .name,
-        match: [[(.name | split("[-_]";"g") | join(""))], [.name], (.name | split("[-_]";"g"))] | add | unique,
+        match: [[(.name | split("[-_]";"g") | join(""))], [.name], (.name | split("[-_]";"g"))] | add | unique | join(" "),
         subtitle: (.description // "No description"),
         arg: .html_url,
         quicklookurl: .html_url
