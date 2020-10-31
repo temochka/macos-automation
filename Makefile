@@ -18,7 +18,6 @@ open-note-app: src/notes/open_note_url.app
 	for script_app in $^; do \
 		filename=$$(basename $$script_app); \
 		osacompile -o $(OUTPUT_DIR)/scripts/$$filename $$script_app/main.applescript; \
-		osacompile -l JavaScript -o $(OUTPUT_DIR)/scripts/$$filename/Contents/Resources/Scripts/helper.scpt $$script_app/helper.js; \
 		cp -rf $$script_app/Contents $(OUTPUT_DIR)/scripts/$$filename/; \
 	done
 
