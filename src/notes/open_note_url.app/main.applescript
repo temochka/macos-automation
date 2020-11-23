@@ -1,15 +1,6 @@
-use framework "Foundation"
-use scripting additions
-property NSDate : a reference to current application's NSDate
-property NSString : a reference to current application's NSString
-property NSNumber : a reference to current application's NSNumber
-
 on open location noteURL
 	tell application "Notes"
-		-- a supported noteURL looks like: shortcuts://run-shortcut?name=NoteURL&input=1604094720
-		set prefix to "shortcuts://run-shortcut?name=NoteURL&input="
-
-		if (offset of prefix in noteURL) is 0 then
+		if (offset of (my NOTE_URL_PREFIX) in noteURL) is 0 then
 			display dialog ("Don't know how to handle the following URL: " & noteURL) buttons { "OK" }
 			return
 		end if
@@ -22,3 +13,11 @@ on open location noteURL
 		show note id theNoteId
 	end tell
 end open location
+
+on run
+	display dialog ("The script will now try to read your notes! You might be prompted for permissions.") buttons { "OK", "Cancel" } default button "OK" cancel button "Cancel"
+	tell application "Notes"
+		set theNoteId to id of first note in default account
+		display dialog ("You should be all set!") buttons { "OK" }
+	end tell
+end run

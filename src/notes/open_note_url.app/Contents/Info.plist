@@ -11,7 +11,7 @@
 	<key>CFBundleIconFile</key>
 	<string>applet</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.temochka.AppleScript.AppleNotesUrl</string>
+	<string>com.temochka.applescript.open-notes-url</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -62,24 +62,5 @@
 	<string>This script needs access to Siri to run.</string>
 	<key>NSSystemAdministrationUsageDescription</key>
 	<string>This script needs access to administer this system to run.</string>
-	<key>WindowState</key>
-	<dict>
-		<key>bundleDividerCollapsed</key>
-		<true/>
-		<key>bundlePositionOfDivider</key>
-		<real>0.0</real>
-		<key>dividerCollapsed</key>
-		<false/>
-		<key>eventLogLevel</key>
-		<integer>2</integer>
-		<key>name</key>
-		<string>ScriptWindowState</string>
-		<key>positionOfDivider</key>
-		<real>256</real>
-		<key>savedFrame</key>
-		<string>332 -13 700 672 0 0 1920 1057 </string>
-		<key>selectedTab</key>
-		<string>result</string>
-	</dict>
 </dict>
 </plist>

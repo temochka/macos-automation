@@ -10,15 +10,16 @@ applescript: src/*/*.applescript
 	for script in $^; do \
 		filename=$$(basename $$script | sed -E s/\.[^.]+$$//); \
 		echo $$filename; \
-		osacompile -o $(OUTPUT_DIR)/scripts/$$filename.scpt $$script; \
+		cat src/lib.applescript $$script | osacompile -o $(OUTPUT_DIR)/scripts/$$filename.scpt; \
 	done
 
 open-note-app: src/notes/open_note_url.app
 	mkdir -p $(OUTPUT_DIR)/scripts;
 	for script_app in $^; do \
 		filename=$$(basename $$script_app); \
-		osacompile -o $(OUTPUT_DIR)/scripts/$$filename $$script_app/main.applescript; \
+		cat src/lib.applescript $$script_app/main.applescript | osacompile -o $(OUTPUT_DIR)/scripts/$$filename; \
 		cp -rf $$script_app/Contents $(OUTPUT_DIR)/scripts/$$filename/; \
+		codesign --force --deep -s - $(OUTPUT_DIR)/scripts/$$filename; \
 	done
 
 jxa: src/*/*.js
