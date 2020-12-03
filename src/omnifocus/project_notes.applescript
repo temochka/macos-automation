@@ -25,7 +25,9 @@ tell application "OmniFocus"
 			
 			if (count of noteURLs) is 0 then
 				tell application "Notes"
-					set newNote to make new note in default account at folder "Notes" with properties {name:theProject's name, body:"omnifocus:///task/" & (theProject's id)}
+					set taskUrl to "omnifocus:///task/" & (theProject's id)
+					set noteBody to "<h1>" & theProject's name & "</h1><p><a href=" & taskUrl & ">" & taskUrl & "</a></p><ul><li></li></ul>"
+					set newNote to make new note in default account at folder "Notes" with properties {body: noteBody}
 					set noteId to «class seld» of (newNote as record)
 					set noteURL to (my getNoteUri(noteId))
 				end tell
