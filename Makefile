@@ -1,11 +1,14 @@
 OUTPUT_DIR := target
 SHELL := /bin/bash
 
-all: applescript open-note-app jxa workflows ical-now
+all: applescript-automation open-note-app jxa-automation workflows ical-now
 clean:
 	rm -rf $(OUTPUT_DIR)
 
-applescript: applescript/*/*.applescript
+install:
+	cp $(OUTPUT_DIR)/cli/ical-now ~/bin/
+
+applescript-automation: applescript/*/*.applescript
 	mkdir -p $(OUTPUT_DIR)/scripts;
 	for script in $^; do \
 		filename=$$(basename $$script | sed -E s/\.[^.]+$$//); \
@@ -22,7 +25,7 @@ open-note-app: applescript/notes/open_note_url.app
 		codesign --force --deep -s - $(OUTPUT_DIR)/scripts/$$filename; \
 	done
 
-jxa: applescript/*/*.js
+jxa-automation: applescript/*/*.js
 	mkdir -p $(OUTPUT_DIR)/scripts;
 	for script in $^; do \
 		filename=$$(basename $$script | sed -E s/\.[^.]+$$//); \
