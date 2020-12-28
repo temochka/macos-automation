@@ -25,7 +25,12 @@ let store = EKEventStore()
 
 if EKEventStore.authorizationStatus(for: .event) != .authorized {
     print("Not authorized to access the Calendar. Will ask for permission.")
-    store.requestAccess(to: .event) { _, _ in }
+    let group = DispatchGroup()
+
+    group.enter()
+    store.requestAccess(to: .event) { _, _ in group.leave() }
+
+    group.wait()
     exit(0)
 }
 
