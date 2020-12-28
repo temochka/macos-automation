@@ -1,12 +1,12 @@
 OUTPUT_DIR := target
 SHELL := /bin/bash
 
-all: applescript-automation open-note-app jxa-automation workflows ical-now
+all: applescript-automation open-note-app jxa-automation workflows ical-now ical-now-links
 clean:
 	rm -rf $(OUTPUT_DIR)
 
 install:
-	cp $(OUTPUT_DIR)/cli/ical-now ~/bin/
+	cp $(OUTPUT_DIR)/cli/ical-* ~/bin/
 
 applescript-automation: applescript/*/*.applescript
 	mkdir -p $(OUTPUT_DIR)/scripts;
@@ -41,8 +41,13 @@ workflows: alfred/*
 		zip $$filename -j -r $$workflow; \
 	done
 
-ical-now: cli/ical-now/main.swift
+ical-now: cli/ical-now/ical_now.swift
 	mkdir -p $(OUTPUT_DIR)/cli;
 	@xcrun swiftc -sdk $(shell xcrun --show-sdk-path --sdk macosx) -o $(OUTPUT_DIR)/cli/ical-now $^;
 	chmod +x $(OUTPUT_DIR)/cli/ical-now
+
+ical-now-links: cli/ical-now/ical_now_links.swift
+	mkdir -p $(OUTPUT_DIR)/cli;
+	@xcrun swiftc -sdk $(shell xcrun --show-sdk-path --sdk macosx) -o $(OUTPUT_DIR)/cli/ical-now-links $^;
+	chmod +x $(OUTPUT_DIR)/cli/ical-now-links
 
