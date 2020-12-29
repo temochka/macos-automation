@@ -24,7 +24,7 @@ dateFormatter.timeStyle = .short
 let eventFilter = store.predicateForEvents(withStart: now, end: tomorrow, calendars: nil)
 let matchingEvents = store
     .events(matching: eventFilter)
-    .filter { !$0.isAllDay }
+    .filter { !$0.isAllDay && $0.status != .canceled }
     .prefix(5)
     .map { (event) -> NSDictionary in
         return [

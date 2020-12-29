@@ -39,7 +39,7 @@ let endOfDay = Calendar.current.startOfDay(for: now + 3600*24)
 let eventFilter = store.predicateForEvents(withStart: now, end: endOfDay, calendars: nil)
 let currentEvent = store
     .events(matching: eventFilter)
-    .filter { !$0.isAllDay }
+    .filter { !$0.isAllDay && $0.status != .canceled }
     .min(by: {
         abs($0.startDate.timeIntervalSince(now)) < abs($1.startDate.timeIntervalSince(now))
     })
