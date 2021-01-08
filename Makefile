@@ -1,7 +1,7 @@
 OUTPUT_DIR := target
 SHELL := /bin/bash
 
-all: applescript-automation open-note-app jxa-automation workflows ical-now ical-now-links
+all: applescript-automation open-note-app jxa-automation alfred-workflow
 clean:
 	rm -rf $(OUTPUT_DIR)
 
@@ -33,21 +33,13 @@ jxa-automation: applescript/*/*.js
 		osacompile -l JavaScript -o $(OUTPUT_DIR)/scripts/$$filename.scpt $$script; \
 	done
 
-workflows: alfred/*
-	mkdir -p $(OUTPUT_DIR)/workflows;
-	for workflow in $^; do \
-		filename=$(OUTPUT_DIR)/workflows/$$(basename $$workflow); \
-		rm -f $$filename; \
-		zip $$filename -j -r $$workflow; \
-	done
+alfred-workflow: AlfredProcess
+	mkdir -p $(OUTPUT_DIR);
+	$(MAKE) -C $^;
+	rm -f $(OUTPUT_DIR)/Process.alfredworkflow;
+	(cd $^ && zip ../$(OUTPUT_DIR)/Process.alfredworkflow -r . --exclude src/\* --exclude .\* --exclude Makefile);
 
-ical-now: cli/ical-now/ical_now.swift
-	mkdir -p $(OUTPUT_DIR)/cli;
-	@xcrun swiftc -sdk $(shell xcrun --show-sdk-path --sdk macosx) -o $(OUTPUT_DIR)/cli/ical-now $^;
-	chmod +x $(OUTPUT_DIR)/cli/ical-now
-
-ical-now-links: cli/ical-now/ical_now_links.swift
-	mkdir -p $(OUTPUT_DIR)/cli;
-	@xcrun swiftc -sdk $(shell xcrun --show-sdk-path --sdk macosx) -o $(OUTPUT_DIR)/cli/ical-now-links $^;
-	chmod +x $(OUTPUT_DIR)/cli/ical-now-links
-
+sync-alfred-workflow: Process.alfredworkflow
+	rm -rf AlfredProcess;
+	unzip -d AlfredProcess $^;
+	$(MAKE) clean -C AlfredProcess;

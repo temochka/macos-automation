@@ -17,11 +17,11 @@ for (i in wordsInbox.notes) {
 }
 
 body = [...new Set(body.split("\n").map(word => word.trim().toLocaleLowerCase()))]
-	.filter(word => word)
+	.filter(word => word && word != "new words")
 	.sort()
-	.map(word => "<li>" + word + "</li>")
+	.map(word => word + "<br>")
 	.join("\n");
 
-newNote.body = "<ul>" + body + "</ul>"
+newNote.body = "<div>" + body + "</div>"
 
 notesInbox.addElement(newNote);
