@@ -122,11 +122,15 @@ if EKEventStore.authorizationStatus(for: .event) != .authorized {
     }
 }
 
-switch CommandLine.arguments[1] {
-case "events":
-    print(toJSON(dict: getEvents(store: store)))
-case "links":
-    print(toJSON(dict: getLinks(store: store)))
-default:
-    print("Unknown command. Known commands are: links, events.")
+if (CommandLine.arguments.count > 1) {
+    switch CommandLine.arguments[1] {
+    case "events":
+        print(toJSON(dict: getEvents(store: store)))
+    case "links":
+        print(toJSON(dict: getLinks(store: store)))
+    default:
+        print("Unknown command. Known commands are: events, links.")
+    }
+} else {
+    print("Run: \(CommandLine.arguments[0]) <events|links>")
 }

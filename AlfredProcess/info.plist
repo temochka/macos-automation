@@ -211,7 +211,7 @@
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string></string>
+				<string>Fetching links…</string>
 				<key>script</key>
 				<string>./assets/calendar links
 </string>
@@ -222,11 +222,11 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Jump to relevant Calendar link</string>
+				<string>Jump to a link in current/upcoming Calendar events.</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
@@ -314,7 +314,7 @@
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string></string>
+				<string>Fetching events…</string>
 				<key>script</key>
 				<string>./assets/calendar events</string>
 				<key>scriptargtype</key>
@@ -324,11 +324,11 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Jump to upcoming calendar events</string>
+				<string>Jump to a current/upcoming event in Calendar.</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
@@ -543,9 +543,11 @@ end alfred_script</string>
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>0</integer>
+				<integer>42</integer>
 				<key>hotmod</key>
-				<integer>0</integer>
+				<integer>655360</integer>
+				<key>hotstring</key>
+				<string>\</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -741,54 +743,64 @@ end alfred_script</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>A collection of various productivity shorctus created by Artem Chistyakov (https://temochka.com).</string>
+	<string>A collection of various productivity shorctus created by Artem Chistyakov (https://temochka.com).
+
+CHANGELOG
+
+- 1.1.0 - Updated icons, improved calendar script, added README</string>
 	<key>uidata</key>
 	<dict>
 		<key>08C859CE-E4D7-4781-AB08-1CA1526072DE</key>
 		<dict>
+			<key>note</key>
+			<string>Update the list of available GitHub repos.</string>
 			<key>xpos</key>
-			<integer>65</integer>
+			<integer>60</integer>
 			<key>ypos</key>
-			<integer>570</integer>
+			<integer>685</integer>
 		</dict>
 		<key>13A15C1A-9875-4307-BAC5-687F781B31E8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>260</integer>
+			<integer>255</integer>
 			<key>ypos</key>
-			<integer>165</integer>
+			<integer>205</integer>
 		</dict>
 		<key>1D5EE290-EBB6-4F33-95A2-3DDD0A0CF359</key>
 		<dict>
 			<key>xpos</key>
-			<integer>255</integer>
+			<integer>250</integer>
 			<key>ypos</key>
-			<integer>290</integer>
+			<integer>370</integer>
 		</dict>
 		<key>231FFF23-86C7-4E62-98EA-E4FD0544A81D</key>
 		<dict>
+			<key>note</key>
+			<string>Jump to today’s note in Notes.</string>
 			<key>xpos</key>
-			<integer>65</integer>
+			<integer>60</integer>
 			<key>ypos</key>
-			<integer>290</integer>
+			<integer>370</integer>
 		</dict>
 		<key>24F33625-57E7-4AC3-BE3B-5763DC974E44</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>4</integer>
 			<key>note</key>
-			<string>Press this shortcut to launch the browser</string>
+			<string>Launch the default browser</string>
 			<key>xpos</key>
-			<integer>65</integer>
+			<integer>60</integer>
 			<key>ypos</key>
-			<integer>830</integer>
+			<integer>945</integer>
 		</dict>
 		<key>38B471A4-DEFB-4E57-8DF7-18674A9EE94E</key>
 		<dict>
+			<key>note</key>
+			<string>Jump to current/upcoming events in Calendar.</string>
 			<key>xpos</key>
-			<integer>65</integer>
+			<integer>60</integer>
 			<key>ypos</key>
-			<integer>165</integer>
+			<integer>205</integer>
 		</dict>
 		<key>455056F0-7B1F-4546-BBA3-628B58C75841</key>
 		<dict>
@@ -799,101 +811,109 @@ end alfred_script</string>
 		</dict>
 		<key>47AA8EE1-420B-4EB5-B52B-A112371868E4</key>
 		<dict>
+			<key>note</key>
+			<string>Jump to links in current/upcoming Calendar events.</string>
 			<key>xpos</key>
-			<integer>65</integer>
+			<integer>60</integer>
 			<key>ypos</key>
 			<integer>40</integer>
 		</dict>
 		<key>51F8B285-CD19-45C0-BF57-B73C73ADC88C</key>
 		<dict>
+			<key>note</key>
+			<string>Transform a notes selection into a linked (and “Hooked”) OmniFocus task.</string>
 			<key>xpos</key>
-			<integer>65</integer>
+			<integer>60</integer>
 			<key>ypos</key>
-			<integer>1005</integer>
+			<integer>1115</integer>
 		</dict>
 		<key>56ADC754-1FA5-4597-8EC5-0C9689360FB6</key>
 		<dict>
 			<key>xpos</key>
-			<integer>730</integer>
+			<integer>725</integer>
 			<key>ypos</key>
-			<integer>1005</integer>
+			<integer>1115</integer>
 		</dict>
 		<key>6FBFAE0C-630B-4505-8385-873C80CEACF9</key>
 		<dict>
 			<key>xpos</key>
 			<integer>255</integer>
 			<key>ypos</key>
-			<integer>1145</integer>
+			<integer>1310</integer>
 		</dict>
 		<key>7429D8D9-E915-4961-B131-27404489F47B</key>
 		<dict>
+			<key>note</key>
+			<string>Jump to a Ruby gem by name.</string>
 			<key>xpos</key>
 			<integer>60</integer>
 			<key>ypos</key>
-			<integer>1145</integer>
+			<integer>1310</integer>
 		</dict>
 		<key>83CD2033-1737-438B-B4BE-51067258734F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>250</integer>
+			<integer>245</integer>
 			<key>ypos</key>
-			<integer>830</integer>
+			<integer>945</integer>
 		</dict>
 		<key>892B4FA4-38BA-4363-B137-BEF9E27D36C8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>425</integer>
+			<integer>420</integer>
 			<key>ypos</key>
-			<integer>570</integer>
+			<integer>685</integer>
 		</dict>
 		<key>95F9E365-6F5D-4D2E-A383-EB2033489E12</key>
 		<dict>
 			<key>xpos</key>
-			<integer>560</integer>
+			<integer>555</integer>
 			<key>ypos</key>
-			<integer>1005</integer>
+			<integer>1115</integer>
 		</dict>
 		<key>9D49E966-8E1E-4990-A097-62C4A1E4B1E4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>250</integer>
+			<integer>245</integer>
 			<key>ypos</key>
-			<integer>570</integer>
+			<integer>685</integer>
 		</dict>
 		<key>B31B2832-E4A7-4796-9AB7-79B379843899</key>
 		<dict>
 			<key>xpos</key>
-			<integer>250</integer>
+			<integer>245</integer>
 			<key>ypos</key>
-			<integer>425</integer>
+			<integer>525</integer>
 		</dict>
 		<key>B94FD960-48ED-4D44-80FC-6EC955655991</key>
 		<dict>
 			<key>xpos</key>
-			<integer>250</integer>
+			<integer>245</integer>
 			<key>ypos</key>
-			<integer>700</integer>
+			<integer>815</integer>
 		</dict>
 		<key>BAA88374-72BA-44A0-84FC-E489C4AB85E4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>260</integer>
+			<integer>255</integer>
 			<key>ypos</key>
-			<integer>1035</integer>
+			<integer>1145</integer>
 		</dict>
 		<key>DFF8F983-58A5-45E3-9368-F332D47A64EE</key>
 		<dict>
+			<key>note</key>
+			<string>Jump to one of your GitHub repos.</string>
 			<key>xpos</key>
-			<integer>65</integer>
+			<integer>60</integer>
 			<key>ypos</key>
-			<integer>425</integer>
+			<integer>525</integer>
 		</dict>
 		<key>E6F45BE8-CBBC-4D98-9791-FD50397BDF82</key>
 		<dict>
 			<key>xpos</key>
-			<integer>385</integer>
+			<integer>380</integer>
 			<key>ypos</key>
-			<integer>1005</integer>
+			<integer>1115</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -906,7 +926,7 @@ end alfred_script</string>
 		<string>GITHUB_TOKEN</string>
 	</array>
 	<key>version</key>
-	<string>1.0.0</string>
+	<string>1.1.0</string>
 	<key>webaddress</key>
 	<string>https://temochka.com</string>
 </dict>
