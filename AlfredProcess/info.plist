@@ -57,6 +57,55 @@
 				<false/>
 			</dict>
 		</array>
+		<key>25E39617-779E-4F95-A75C-3D9CE029926E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>29559846-FB8F-493F-BC8F-D32F9A9E9FBA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>29559846-FB8F-493F-BC8F-D32F9A9E9FBA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9EE16344-0E81-4B1C-AF73-70DC25251CBB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>7BBE72B6-F4B4-4709-A78F-555EA2B3C416</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>2B43BEE4-8D16-4118-9588-0A015C6B0671</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>29559846-FB8F-493F-BC8F-D32F9A9E9FBA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>38B471A4-DEFB-4E57-8DF7-18674A9EE94E</key>
 		<array>
 			<dict>
@@ -101,6 +150,32 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>6FBFAE0C-630B-4505-8385-873C80CEACF9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>74A9F8C8-7D1B-4C08-9D4D-0256FA2FBEC7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8270A01F-663B-4ADB-84F0-C4557D1DCB38</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>8270A01F-663B-4ADB-84F0-C4557D1DCB38</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2B43BEE4-8D16-4118-9588-0A015C6B0671</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -593,9 +668,11 @@ end alfred_script</string>
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>0</integer>
+				<integer>50</integer>
 				<key>hotmod</key>
-				<integer>0</integer>
+				<integer>655360</integer>
+				<key>hotstring</key>
+				<string>`</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -741,13 +818,178 @@ end alfred_script</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  set tmpfile to (do shell script "mktemp")
+
+  try
+    set fhandle to open for access tmpfile with write permission
+    write (the clipboard as «class PNGf») to fhandle
+    close access fhandle
+    tmpfile
+  on error errMsg number n
+    if n = -1700 then -- Not a PNG clibpoard
+      display dialog "The clibpoard is not a PNG image." buttons {"OK"}
+    else
+      try
+        close access tmpfile
+      end try
+    end if
+	""
+  end try
+end alfred_script</string>
+				<key>cachescript</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>8270A01F-663B-4ADB-84F0-C4557D1DCB38</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>imglink</string>
+				<key>subtext</key>
+				<string>(and paste to the frontmost app)</string>
+				<key>text</key>
+				<string>Get a shareable link to the clipped image file</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>74A9F8C8-7D1B-4C08-9D4D-0256FA2FBEC7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string></string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>2B43BEE4-8D16-4118-9588-0A015C6B0671</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>9EE16344-0E81-4B1C-AF73-70DC25251CBB</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>set -e
+
+query=$1
+filename="$(md5 -q $query).png"
+url="https://${IMAGE_UPLOAD_HOSTNAME}/${filename}"
+chmod 540 $query
+scp $query "${IMAGE_UPLOAD_SSH_USER}@${IMAGE_UPLOAD_SSH_HOSTNAME}:${IMAGE_UPLOAD_WEBROOT_PATH}/${filename}"
+
+echo $url</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>29559846-FB8F-493F-BC8F-D32F9A9E9FBA</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<false/>
+				<key>filetypes</key>
+				<array>
+					<string>public.jpeg</string>
+					<string>public.png</string>
+				</array>
+				<key>name</key>
+				<string>Get a shareable link</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>25E39617-779E-4F95-A75C-3D9CE029926E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Image URL copied to clipboard</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>7BBE72B6-F4B4-4709-A78F-555EA2B3C416</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>A collection of various productivity shorctus created by Artem Chistyakov (https://temochka.com).
 
 CHANGELOG
 
-- 1.1.0 - Updated icons, improved calendar script, added README</string>
+- 1.1.0 - Updated icons, improved calendar script, added README.
+- 1.2.0 - Added an image sharing workflow that works with my personal image sharing hosting.</string>
 	<key>uidata</key>
 	<dict>
 		<key>08C859CE-E4D7-4781-AB08-1CA1526072DE</key>
@@ -792,6 +1034,29 @@ CHANGELOG
 			<integer>60</integer>
 			<key>ypos</key>
 			<integer>945</integer>
+		</dict>
+		<key>25E39617-779E-4F95-A75C-3D9CE029926E</key>
+		<dict>
+			<key>note</key>
+			<string>Get a shareable link to the selected image file.</string>
+			<key>xpos</key>
+			<integer>55</integer>
+			<key>ypos</key>
+			<integer>1655</integer>
+		</dict>
+		<key>29559846-FB8F-493F-BC8F-D32F9A9E9FBA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>505</integer>
+			<key>ypos</key>
+			<integer>1655</integer>
+		</dict>
+		<key>2B43BEE4-8D16-4118-9588-0A015C6B0671</key>
+		<dict>
+			<key>xpos</key>
+			<integer>395</integer>
+			<key>ypos</key>
+			<integer>1510</integer>
 		</dict>
 		<key>38B471A4-DEFB-4E57-8DF7-18674A9EE94E</key>
 		<dict>
@@ -850,6 +1115,29 @@ CHANGELOG
 			<key>ypos</key>
 			<integer>1310</integer>
 		</dict>
+		<key>74A9F8C8-7D1B-4C08-9D4D-0256FA2FBEC7</key>
+		<dict>
+			<key>note</key>
+			<string>Get a shareable link to the clipped image file</string>
+			<key>xpos</key>
+			<integer>55</integer>
+			<key>ypos</key>
+			<integer>1480</integer>
+		</dict>
+		<key>7BBE72B6-F4B4-4709-A78F-555EA2B3C416</key>
+		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
+			<key>ypos</key>
+			<integer>1725</integer>
+		</dict>
+		<key>8270A01F-663B-4ADB-84F0-C4557D1DCB38</key>
+		<dict>
+			<key>xpos</key>
+			<integer>250</integer>
+			<key>ypos</key>
+			<integer>1480</integer>
+		</dict>
 		<key>83CD2033-1737-438B-B4BE-51067258734F</key>
 		<dict>
 			<key>xpos</key>
@@ -877,6 +1165,13 @@ CHANGELOG
 			<integer>245</integer>
 			<key>ypos</key>
 			<integer>685</integer>
+		</dict>
+		<key>9EE16344-0E81-4B1C-AF73-70DC25251CBB</key>
+		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
+			<key>ypos</key>
+			<integer>1590</integer>
 		</dict>
 		<key>B31B2832-E4A7-4796-9AB7-79B379843899</key>
 		<dict>
@@ -920,13 +1215,25 @@ CHANGELOG
 	<dict>
 		<key>GITHUB_TOKEN</key>
 		<string></string>
+		<key>IMAGE_UPLOAD_HOSTNAME</key>
+		<string></string>
+		<key>IMAGE_UPLOAD_SSH_HOSTNAME</key>
+		<string></string>
+		<key>IMAGE_UPLOAD_SSH_USER</key>
+		<string></string>
+		<key>IMAGE_UPLOAD_WEBROOT_PATH</key>
+		<string></string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
 		<string>GITHUB_TOKEN</string>
+		<string>IMAGE_UPLOAD_HOSTNAME</string>
+		<string>IMAGE_UPLOAD_SSH_HOSTNAME</string>
+		<string>IMAGE_UPLOAD_WEBROOT_PATH</string>
+		<string>IMAGE_UPLOAD_SSH_USER</string>
 	</array>
 	<key>version</key>
-	<string>1.1.0</string>
+	<string>1.2.0</string>
 	<key>webaddress</key>
 	<string>https://temochka.com</string>
 </dict>
