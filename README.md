@@ -1,27 +1,24 @@
 # macOS automation scripts
 
-A collection of my macOS automation scripts (Alfred workflows, AppleScript and JXA). To compile, run:
+A collection of my macOS automation scripts (Alfred workflow, AppleScript and JXA). To compile, run:
 
 ``` bash
 make all
 ```
 
-## Alfred
+## AlfredProcess
 
-### Browser Hotkey
+A mega-workflow for [Alfred](https://www.alfredapp.com) that encompasses all of my custom automations. See its own [README](AlfredProcess/README.md) for details. To build just the workflow, run:
 
-Press ⌘+⇧+B to launch the default browser from anywhere. This is especially useful if you use different browsers on different computers.
+``` bash
+make alfred-workflow
+```
 
-### GitHub Bookmarks
+Then install the workflow via:
 
-An Alfred workflow to quickly jump to any of your GitHub repositories, private or public. Requires `jq` (`brew install jq`) and a GitHub account.
-
-* Use `gh` keyword to fuzzy-search GitHub repo you have access to.
-* Use `gh-refresh` keyword to periodically refresh the cached repository list.
-
-### Rubygems
-
-* Use `gem` keyword to look up gems on rubygems.org
+``` bash
+open target/Process.alfredworkflow
+```
 
 ## Mail
 
