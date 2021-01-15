@@ -833,12 +833,12 @@ end alfred_script</string>
   on error errMsg number n
     if n = -1700 then -- Not a PNG clibpoard
       display dialog "The clibpoard is not a PNG image." buttons {"OK"}
-    else
-      try
-        close access tmpfile
-      end try
     end if
-	""
+    try
+      close access tmpfile
+    end try
+    
+    ""
   end try
 end alfred_script</string>
 				<key>cachescript</key>
@@ -921,10 +921,10 @@ end alfred_script</string>
 				<string>set -e
 
 query=$1
-filename="$(md5 -q $query).png"
+filename="$(md5 -q "$query").png"
 url="https://${IMAGE_UPLOAD_HOSTNAME}/${filename}"
-chmod 540 $query
-scp $query "${IMAGE_UPLOAD_SSH_USER}@${IMAGE_UPLOAD_SSH_HOSTNAME}:${IMAGE_UPLOAD_WEBROOT_PATH}/${filename}"
+chmod 540 "$query"
+scp "$query" "${IMAGE_UPLOAD_SSH_USER}@${IMAGE_UPLOAD_SSH_HOSTNAME}:${IMAGE_UPLOAD_WEBROOT_PATH}/${filename}"
 
 echo $url</string>
 				<key>scriptargtype</key>
@@ -988,8 +988,9 @@ echo $url</string>
 
 CHANGELOG
 
-- 1.1.0 - Updated icons, improved calendar script, added README.
-- 1.2.0 - Added an image sharing workflow that works with my personal image sharing hosting.</string>
+- 1.2.1 - Added documentation for the image sharing workflow.
+- 1.2.0 - Added an image sharing workflow that works with my personal image sharing hosting.
+- 1.1.0 - Updated icons, improved calendar script, added README.</string>
 	<key>uidata</key>
 	<dict>
 		<key>08C859CE-E4D7-4781-AB08-1CA1526072DE</key>
@@ -1046,6 +1047,8 @@ CHANGELOG
 		</dict>
 		<key>29559846-FB8F-493F-BC8F-D32F9A9E9FBA</key>
 		<dict>
+			<key>note</key>
+			<string>Upload the file, output the URL.</string>
 			<key>xpos</key>
 			<integer>505</integer>
 			<key>ypos</key>
@@ -1133,6 +1136,8 @@ CHANGELOG
 		</dict>
 		<key>8270A01F-663B-4ADB-84F0-C4557D1DCB38</key>
 		<dict>
+			<key>note</key>
+			<string>Save clipboard contents to a temporary file.</string>
 			<key>xpos</key>
 			<integer>250</integer>
 			<key>ypos</key>
@@ -1233,7 +1238,7 @@ CHANGELOG
 		<string>IMAGE_UPLOAD_SSH_USER</string>
 	</array>
 	<key>version</key>
-	<string>1.2.0</string>
+	<string>1.2.1</string>
 	<key>webaddress</key>
 	<string>https://temochka.com</string>
 </dict>

@@ -65,3 +65,15 @@ Type `gem <query>` to jump to a gem on Rubygems.org.
 ### Browser shortcut
 
 Press <kbd>⌥</kbd>+<kbd>⇧</kbd>+<kbd>\\</kbd> to launch the default browser. Useful if you use diffrent default browsers on different machines and always forget which one is which.
+
+### Image sharing
+
+Clip a screenshot (<kbd>⌘</kbd>+<kbd>⌃</kbd>+<kbd>⇧</kbd>+<kbd>4</kbd> or <kbd>⌘</kbd>+<kbd>⌃</kbd>+<kbd>⇧</kbd>+<kbd>3</kbd>), then type `imglink` keyword into Alfred to upload the image and paste the link.
+Alternatively, invoke the workflow as a [File Action](https://www.alfredapp.com/blog/tips-and-tricks/file-actions-from-alfred-or-finder/) for any file.
+
+The workflow requires the following workflow variables to be set in Alfred:
+
+* `IMAGE_UPLOAD_HOSTNAME` - the hostname for your image hosting server, e.g. `images.example.org`;
+* `IMAGE_UPLOAD_SSH_HOSTNAME` - the hostname that provides SSH access to your image hosting server’s filesystem;
+* `IMAGE_UPLOAD_SSH_USER` - the SSH user to use when connecting to the server;
+* `IMAGE_UPLOAD_WEBROOT_PATH` - the server path where to put the uploaded file;
