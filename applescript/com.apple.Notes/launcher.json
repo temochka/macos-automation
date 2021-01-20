@@ -2,11 +2,7 @@
   "items":
     [ {
       "title": "Copy URL of selected note",
-      "arg": "copy_mail_message_url.scpt"
-    }
-    , {
-      "title": "Copy URL of selected note",
-      "arg": "copy_mail_message_url.scpt"
+      "arg": "copy_note_url.scpt"
     }
     , {
       "title": "Generate Vocabulary update",

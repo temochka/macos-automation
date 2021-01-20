@@ -62,6 +62,12 @@ Type `gem <query>` to jump to a gem on Rubygems.org.
 
 ## Misc
 
+## AppleScript launcher
+
+Run a registered AppleScript automation for the currently focused app. Requires the `SCRIPTS_DIR` variable to be set. The specified directory should be structured in the following way: each supported app gets a subdirectory named after its bundle id, inside are the scripts accompanied by a `launcher.json` file written in Alfred’s [Script Filter](https://www.alfredapp.com/help/workflows/inputs/script-filter/) format. See [my AppleScript collection](https://github.com/temochka/macos-automation/tree/master/applescript) for an example.
+
+<img src="assets/screenshots/launcher.png" alt="a screenshot of a Notes app window with Alfred displayed on top of it. Alfred displays the list of registered automations." width="600">
+
 ### Browser shortcut
 
 Press <kbd>⌥</kbd>+<kbd>⇧</kbd>+<kbd>\\</kbd> to launch the default browser. Useful if you use diffrent default browsers on different machines and always forget which one is which.

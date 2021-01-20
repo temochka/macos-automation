@@ -145,6 +145,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>60334227-90E9-4FD7-B3FD-E20CDE05E526</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EA1EFB48-38A4-4C59-BB21-79F91926D8E2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>7429D8D9-E915-4961-B131-27404489F47B</key>
 		<array>
 			<dict>
@@ -176,6 +189,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>2B43BEE4-8D16-4118-9588-0A015C6B0671</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>860B0E10-B988-46B6-9661-6E76D127A8FB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>60334227-90E9-4FD7-B3FD-E20CDE05E526</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -332,40 +358,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>function run(argv) {
-	var input = JSON.parse(argv);
-	var {eventId, calendarId} = input;
-	var Calendar = Application("Calendar");
-	Calendar.switchView({to: "day view"});
-	Calendar.viewCalendar({at: new Date()});
-
-	if (eventId) {
-		var event = Calendar.calendars.byId(calendarId).events.byId(eventId);
-		Calendar.show(event);
-	}
-}</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>7</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>13A15C1A-9875-4307-BAC5-687F781B31E8</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -415,23 +407,36 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>nown</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Jump to today's note</string>
-				<key>withspace</key>
+				<key>concurrently</key>
 				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>function run(argv) {
+	var input = JSON.parse(argv);
+	var {eventId, calendarId} = input;
+	var Calendar = Application("Calendar");
+	Calendar.switchView({to: "day view"});
+	Calendar.viewCalendar({at: new Date()});
+
+	if (eventId) {
+		var event = Calendar.calendars.byId(calendarId).events.byId(eventId);
+		Calendar.show(event);
+	}
+}</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>7</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>231FFF23-86C7-4E62-98EA-E4FD0544A81D</string>
+			<string>13A15C1A-9875-4307-BAC5-687F781B31E8</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -455,19 +460,21 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>nown</string>
+				<key>subtext</key>
 				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>{query}</string>
-				<key>utf8</key>
-				<true/>
+				<key>text</key>
+				<string>Jump to today's note</string>
+				<key>withspace</key>
+				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>B31B2832-E4A7-4796-9AB7-79B379843899</string>
+			<string>231FFF23-86C7-4E62-98EA-E4FD0544A81D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -523,6 +530,25 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>B31B2832-E4A7-4796-9AB7-79B379843899</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -538,6 +564,27 @@ end alfred_script</string>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>08C859CE-E4D7-4781-AB08-1CA1526072DE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Refresh completed</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>892B4FA4-38BA-4363-B137-BEF9E27D36C8</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -574,27 +621,6 @@ end alfred_script</string>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>Refresh completed</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>892B4FA4-38BA-4363-B137-BEF9E27D36C8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
 				<string>This takes some time</string>
 				<key>title</key>
 				<string>Refreshing bookmarks in the background</string>
@@ -603,6 +629,25 @@ end alfred_script</string>
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>B94FD960-48ED-4D44-80FC-6EC955655991</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://duckduckgo.com</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>83CD2033-1737-438B-B4BE-51067258734F</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -640,19 +685,67 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+echo "&lt;a href=\"$1\"&gt;$selection&lt;/a&gt;" | textutil -inputencoding UTF-8 -format html -convert rtf -stdin -stdout | LC_CTYPE=UTF-8 pbcopy</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
 				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://duckduckgo.com</string>
-				<key>utf8</key>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>95F9E365-6F5D-4D2E-A383-EB2033489E12</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>count</key>
+				<integer>1</integer>
+				<key>keychar</key>
+				<string>v</string>
+				<key>keycode</key>
+				<integer>-1</integer>
+				<key>keymod</key>
+				<integer>1048576</integer>
+				<key>overridewithargument</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.dispatchkeycombo</string>
+			<key>uid</key>
+			<string>56ADC754-1FA5-4597-8EC5-0C9689360FB6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+tell application "Hook"	set theNoteHook to bookmark from active windowend telltell application "OmniFocus"	activate	tell front document		set theTask to make new inbox task with properties {name:q}
+		set theTaskUrl to "omnifocus:///task/" &amp; (id of theTask)		GetURL theTaskUrl	end tellend telltell application "Hook"	set theTaskHook to bookmark from active window	hook theNoteHook and theTaskHookend telltell application "Notes"	activateend tell
+
+return theTaskUrl
+
+end alfred_script</string>
+				<key>cachescript</key>
 				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.action.applescript</string>
 			<key>uid</key>
-			<string>83CD2033-1737-438B-B4BE-51067258734F</string>
+			<string>E6F45BE8-CBBC-4D98-9791-FD50397BDF82</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -694,73 +787,6 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>query=$1
-
-echo "&lt;a href=\"$1\"&gt;$selection&lt;/a&gt;" | textutil -inputencoding UTF-8 -format html -convert rtf -stdin -stdout | LC_CTYPE=UTF-8 pbcopy</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>95F9E365-6F5D-4D2E-A383-EB2033489E12</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-tell application "Hook"	set theNoteHook to bookmark from active windowend telltell application "OmniFocus"	activate	tell front document		set theTask to make new inbox task with properties {name:q}
-		set theTaskUrl to "omnifocus:///task/" &amp; (id of theTask)		GetURL theTaskUrl	end tellend telltell application "Hook"	set theTaskHook to bookmark from active window	hook theNoteHook and theTaskHookend telltell application "Notes"	activateend tell
-
-return theTaskUrl
-
-end alfred_script</string>
-				<key>cachescript</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
-			<key>uid</key>
-			<string>E6F45BE8-CBBC-4D98-9791-FD50397BDF82</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>count</key>
-				<integer>1</integer>
-				<key>keychar</key>
-				<string>v</string>
-				<key>keycode</key>
-				<integer>-1</integer>
-				<key>keymod</key>
-				<integer>1048576</integer>
-				<key>overridewithargument</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.dispatchkeycombo</string>
-			<key>uid</key>
-			<string>56ADC754-1FA5-4597-8EC5-0C9689360FB6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string>{query}</string>
 				<key>passthroughargument</key>
@@ -775,6 +801,25 @@ end alfred_script</string>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>BAA88374-72BA-44A0-84FC-E489C4AB85E4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://rubygems.org/gems/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>6FBFAE0C-630B-4505-8385-873C80CEACF9</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -796,25 +841,6 @@ end alfred_script</string>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>7429D8D9-E915-4961-B131-27404489F47B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://rubygems.org/gems/{query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>6FBFAE0C-630B-4505-8385-873C80CEACF9</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -982,12 +1008,122 @@ echo $url</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>osascript "$SCRIPTS_DIR/$focusedapp/$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>EA1EFB48-38A4-4C59-BB21-79F91926D8E2</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>44</integer>
+				<key>hotmod</key>
+				<integer>655360</integer>
+				<key>hotstring</key>
+				<string>/</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>860B0E10-B988-46B6-9661-6E76D127A8FB</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading scripts for {focusedapp}...</string>
+				<key>script</key>
+				<string>set -e
+
+app_dir="$focusedapp"
+
+cd $SCRIPTS_DIR
+
+if [ -d $app_dir ]; then
+	cat $app_dir/launcher.json
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Run script</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>60334227-90E9-4FD7-B3FD-E20CDE05E526</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>A collection of various productivity shorctus created by Artem Chistyakov (https://temochka.com).
 
 CHANGELOG
 
+- 1.3.0 - Added a custom AppleScript launcher.
 - 1.2.1 - Added documentation for the image sharing workflow.
 - 1.2.0 - Added an image sharing workflow that works with my personal image sharing hosting.
 - 1.1.0 - Updated icons, improved calendar script, added README.</string>
@@ -1102,6 +1238,13 @@ CHANGELOG
 			<key>ypos</key>
 			<integer>1115</integer>
 		</dict>
+		<key>60334227-90E9-4FD7-B3FD-E20CDE05E526</key>
+		<dict>
+			<key>xpos</key>
+			<integer>235</integer>
+			<key>ypos</key>
+			<integer>1860</integer>
+		</dict>
 		<key>6FBFAE0C-630B-4505-8385-873C80CEACF9</key>
 		<dict>
 			<key>xpos</key>
@@ -1149,6 +1292,15 @@ CHANGELOG
 			<integer>245</integer>
 			<key>ypos</key>
 			<integer>945</integer>
+		</dict>
+		<key>860B0E10-B988-46B6-9661-6E76D127A8FB</key>
+		<dict>
+			<key>note</key>
+			<string>Run a script for the currently focused app.</string>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>1860</integer>
 		</dict>
 		<key>892B4FA4-38BA-4363-B137-BEF9E27D36C8</key>
 		<dict>
@@ -1215,6 +1367,13 @@ CHANGELOG
 			<key>ypos</key>
 			<integer>1115</integer>
 		</dict>
+		<key>EA1EFB48-38A4-4C59-BB21-79F91926D8E2</key>
+		<dict>
+			<key>xpos</key>
+			<integer>425</integer>
+			<key>ypos</key>
+			<integer>1860</integer>
+		</dict>
 	</dict>
 	<key>variables</key>
 	<dict>
@@ -1228,17 +1387,20 @@ CHANGELOG
 		<string></string>
 		<key>IMAGE_UPLOAD_WEBROOT_PATH</key>
 		<string></string>
+		<key>SCRIPTS_DIR</key>
+		<string></string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
 		<string>GITHUB_TOKEN</string>
 		<string>IMAGE_UPLOAD_HOSTNAME</string>
+		<string>SCRIPTS_DIR</string>
 		<string>IMAGE_UPLOAD_SSH_HOSTNAME</string>
 		<string>IMAGE_UPLOAD_WEBROOT_PATH</string>
 		<string>IMAGE_UPLOAD_SSH_USER</string>
 	</array>
 	<key>version</key>
-	<string>1.2.1</string>
+	<string>1.3.0</string>
 	<key>webaddress</key>
 	<string>https://temochka.com</string>
 </dict>
