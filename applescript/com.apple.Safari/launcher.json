@@ -1,0 +1,12 @@
+{
+  "items":
+    [ {
+      "title": "Open highlighted link",
+      "arg": "open_highlighted_link.scpt"
+      }
+    , {
+      "title": "Safari tab to OmniFocus",
+      "arg": "safari_tab_to_omnifocus.js"
+      }
+    ]
+}

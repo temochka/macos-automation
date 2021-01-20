@@ -1,36 +1,48 @@
 OUTPUT_DIR := target
 SHELL := /bin/bash
+APPLESCRIPT := applescript/*/*.applescript
+JXA := applescript/*/*.js
+LAUNCHERS := applescript/*/launcher.json
 
-all: applescript-automation open-note-app jxa-automation alfred-workflow
+all: launchers applescript-automation jxa-automation open-note-app  alfred-workflow
 clean:
 	rm -rf $(OUTPUT_DIR)
 
-install:
-	cp $(OUTPUT_DIR)/cli/ical-* ~/bin/
-
-applescript-automation: applescript/*/*.applescript
-	mkdir -p $(OUTPUT_DIR)/scripts;
-	for script in $^; do \
-		filename=$$(basename $$script | sed -E s/\.[^.]+$$//); \
-		echo $$filename; \
-		cat applescript/lib.applescript $$script | osacompile -o $(OUTPUT_DIR)/scripts/$$filename.scpt; \
+target-dir:
+	mkdir -p $(OUTPUT_DIR)/applescript;
+	mkdir -p $(OUTPUT_DIR)/apps;
+	for dir in $$(find applescript -mindepth 1 -maxdepth 1 -not -type f); do \
+		mkdir -p $(OUTPUT_DIR)/applescript/$$(basename $$dir); \
 	done
 
-open-note-app: applescript/notes/open_note_url.app
-	mkdir -p $(OUTPUT_DIR)/scripts;
+launchers: target-dir $(LAUNCHERS)
+	mkdir -p $(OUTPUT_DIR)/applescript;
+	for launcher in $(LAUNCHERS); do \
+		cp $$launcher target/$$launcher; \
+	done
+
+applescript-automation: target-dir $(APPLESCRIPT)
+	for script in $(APPLESCRIPT); do \
+		dirname=$$(dirname $$script | sed -E s/.*\\///); \
+		filename=$$(basename $$script | sed -E s/\.[^.]+$$//); \
+		echo $$filename; \
+		cat applescript/lib.applescript $$script | osacompile -o $(OUTPUT_DIR)/applescript/$$dirname/$$filename.scpt; \
+	done
+
+jxa-automation: target-dir $(JXA)
+	for script in $(JXA); do \
+		dirname=$$(dirname $$script | sed -E s/.*\\///); \
+		filename=$$(basename $$script | sed -E s/\.[^.]+$$//); \
+		echo $$filename; \
+		osacompile -l JavaScript -o $(OUTPUT_DIR)/applescript/$$dirname/$$filename.scpt $$script; \
+	done
+
+open-note-app: apps/*
 	for script_app in $^; do \
 		filename=$$(basename $$script_app); \
-		cat applescript/lib.applescript $$script_app/main.applescript | osacompile -o $(OUTPUT_DIR)/scripts/$$filename; \
-		cp -rf $$script_app/Contents $(OUTPUT_DIR)/scripts/$$filename/; \
-		codesign --force --deep -s - $(OUTPUT_DIR)/scripts/$$filename; \
-	done
-
-jxa-automation: applescript/*/*.js
-	mkdir -p $(OUTPUT_DIR)/scripts;
-	for script in $^; do \
-		filename=$$(basename $$script | sed -E s/\.[^.]+$$//); \
-		echo $$filename; \
-		osacompile -l JavaScript -o $(OUTPUT_DIR)/scripts/$$filename.scpt $$script; \
+		cat applescript/lib.applescript $$script_app/main.applescript | osacompile -o $(OUTPUT_DIR)/apps/$$filename; \
+		cp -rf $$script_app/Contents $(OUTPUT_DIR)/apps/$$filename/; \
+		codesign --force --deep -s - $(OUTPUT_DIR)/apps/$$filename; \
 	done
 
 alfred-workflow: AlfredProcess
