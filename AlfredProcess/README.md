@@ -25,6 +25,12 @@ Type `nowl` into Alfred to get a list of links mentioned in current and upcoming
 
 ## Notes
 
+### Move selected note(s)
+
+Press a keyboard shortcut (e.g., <kbd>⌥</kbd>+<kbd>⇧</kbd>+<kbd>M</kbd>) to move one or more selected notes to a chosen destination folder.
+
+<img src="assets/screenshots/notes-move.png" alt="a screenshot of the Notes app with an open note titled 'Outdated Note', an Alfred prompt is asking to choose the destination folder, 'Archive' is highlighted" width="600">
+
 ### Jump to daily note
 
 Type `nown` into Alfred to jump to a daily note in "🗓 Daily Notes" folder. Creates the note if doesn't exist.
