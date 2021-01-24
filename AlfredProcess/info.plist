@@ -31,19 +31,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>231FFF23-86C7-4E62-98EA-E4FD0544A81D</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>1D5EE290-EBB6-4F33-95A2-3DDD0A0CF359</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>24F33625-57E7-4AC3-BE3B-5763DC974E44</key>
 		<array>
 			<dict>
@@ -106,63 +93,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>38B471A4-DEFB-4E57-8DF7-18674A9EE94E</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>13A15C1A-9875-4307-BAC5-687F781B31E8</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>47AA8EE1-420B-4EB5-B52B-A112371868E4</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>455056F0-7B1F-4546-BBA3-628B58C75841</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>5188B463-C443-4160-8D7E-50FFB375ACC2</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>AA05E36E-C4CE-441A-BC55-32A285A92C56</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>51F8B285-CD19-45C0-BF57-B73C73ADC88C</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>BAA88374-72BA-44A0-84FC-E489C4AB85E4</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>60334227-90E9-4FD7-B3FD-E20CDE05E526</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>EA1EFB48-38A4-4C59-BB21-79F91926D8E2</string>
+				<string>E01250D1-86A0-46B1-965C-AC31A044F472</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -223,11 +158,24 @@
 				<false/>
 			</dict>
 		</array>
-		<key>95F9E365-6F5D-4D2E-A383-EB2033489E12</key>
+		<key>8F98715A-BCA5-48A2-AF31-87339EC00276</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>56ADC754-1FA5-4597-8EC5-0C9689360FB6</string>
+				<string>EA1EFB48-38A4-4C59-BB21-79F91926D8E2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>97C65069-414E-460E-B4BD-6449492CB285</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EA1EFB48-38A4-4C59-BB21-79F91926D8E2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -249,11 +197,23 @@
 				<false/>
 			</dict>
 		</array>
-		<key>AA05E36E-C4CE-441A-BC55-32A285A92C56</key>
+		<key>D3FE8ADC-AF4B-467E-ABFC-6C16124E4816</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>0CAD5FBC-89CD-4BC1-B4D9-EB45D9BCD879</string>
+				<string>97C65069-414E-460E-B4BD-6449492CB285</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>BDBD7D0F-18FE-4CAD-BA8E-F75C1BA623FC</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>EA1EFB48-38A4-4C59-BB21-79F91926D8E2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -261,16 +221,15 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
-		</array>
-		<key>BAA88374-72BA-44A0-84FC-E489C4AB85E4</key>
-		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>E6F45BE8-CBBC-4D98-9791-FD50397BDF82</string>
+				<string>8F98715A-BCA5-48A2-AF31-87339EC00276</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>sourceoutputuid</key>
+				<string>8992C968-BBDB-4464-8DAA-3A779F2F2AD5</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -288,11 +247,24 @@
 				<false/>
 			</dict>
 		</array>
-		<key>E6F45BE8-CBBC-4D98-9791-FD50397BDF82</key>
+		<key>E01250D1-86A0-46B1-965C-AC31A044F472</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>95F9E365-6F5D-4D2E-A383-EB2033489E12</string>
+				<string>D3FE8ADC-AF4B-467E-ABFC-6C16124E4816</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EF3180E5-F604-4155-ACFD-41D4BE15A379</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E01250D1-86A0-46B1-965C-AC31A044F472</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -312,198 +284,6 @@
 	<string>Process</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>keyword</key>
-				<string>nowl</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Fetching links…</string>
-				<key>script</key>
-				<string>./assets/calendar links
-</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Jump to a link in current/upcoming Calendar events.</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>47AA8EE1-420B-4EB5-B52B-A112371868E4</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string></string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>455056F0-7B1F-4546-BBA3-628B58C75841</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>2</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>nowc</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Fetching events…</string>
-				<key>script</key>
-				<string>./assets/calendar events</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Jump to a current/upcoming event in Calendar.</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>38B471A4-DEFB-4E57-8DF7-18674A9EE94E</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>function run(argv) {
-	var input = JSON.parse(argv);
-	var {eventId, calendarId} = input;
-	var Calendar = Application("Calendar");
-	Calendar.switchView({to: "day view"});
-	Calendar.viewCalendar({at: new Date()});
-
-	if (eventId) {
-		var event = Calendar.calendars.byId(calendarId).events.byId(eventId);
-		Calendar.show(event);
-	}
-}</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>7</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>13A15C1A-9875-4307-BAC5-687F781B31E8</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>applescript</key>
-				<string>property DAILY_NOTES_FOLDER : "🗓 Daily Notes"
-
-on alfred_script(q)
-tell application "Notes"	set currentDate to do shell script "date +%F"	set noteTitle to currentDate &amp; " - Daily Note"	try		set theNote to first note in folder DAILY_NOTES_FOLDER whose name = noteTitle	on error		set noteBody to "&lt;html&gt;&lt;body&gt;&lt;div&gt;&lt;h1&gt;" &amp; noteTitle &amp; "&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"		set theNote to make new note in folder DAILY_NOTES_FOLDER in default account with properties {body:noteBody}	end try	show theNoteend tell
-end alfred_script</string>
-				<key>cachescript</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
-			<key>uid</key>
-			<string>1D5EE290-EBB6-4F33-95A2-3DDD0A0CF359</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>nown</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Jump to today's note</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>231FFF23-86C7-4E62-98EA-E4FD0544A81D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -707,239 +487,6 @@ end alfred_script</string>
 			<string>24F33625-57E7-4AC3-BE3B-5763DC974E44</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>query=$1
-
-echo "&lt;a href=\"$1\"&gt;$selection&lt;/a&gt;" | textutil -inputencoding UTF-8 -format html -convert rtf -stdin -stdout | LC_CTYPE=UTF-8 pbcopy</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>95F9E365-6F5D-4D2E-A383-EB2033489E12</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>count</key>
-				<integer>1</integer>
-				<key>keychar</key>
-				<string>v</string>
-				<key>keycode</key>
-				<integer>-1</integer>
-				<key>keymod</key>
-				<integer>1048576</integer>
-				<key>overridewithargument</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.dispatchkeycombo</string>
-			<key>uid</key>
-			<string>56ADC754-1FA5-4597-8EC5-0C9689360FB6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-tell application "Hook"	set theNoteHook to bookmark from active windowend telltell application "OmniFocus"	activate	tell front document		set theTask to make new inbox task with properties {name:q}
-		set theTaskUrl to "omnifocus:///task/" &amp; (id of theTask)		GetURL theTaskUrl	end tellend telltell application "Hook"	set theTaskHook to bookmark from active window	hook theNoteHook and theTaskHookend telltell application "Notes"	activateend tell
-
-return theTaskUrl
-
-end alfred_script</string>
-				<key>cachescript</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
-			<key>uid</key>
-			<string>E6F45BE8-CBBC-4D98-9791-FD50397BDF82</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>1</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>50</integer>
-				<key>hotmod</key>
-				<integer>655360</integer>
-				<key>hotstring</key>
-				<string>`</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedApps</key>
-				<array>
-					<string>com.apple.Notes</string>
-				</array>
-				<key>relatedAppsMode</key>
-				<integer>1</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>51F8B285-CD19-45C0-BF57-B73C73ADC88C</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{query}</string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>selection</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>BAA88374-72BA-44A0-84FC-E489C4AB85E4</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Fetching destination folders...</string>
-				<key>script</key>
-				<string>function run(argv) {
-	var query = argv[0];
-	var app = Application('Notes');
-	var folders = query ? app.folders.whose({ name: { _contains: query } }) : app.folders;
-	return JSON.stringify({
-		items: folders().slice(0, 5).map(folder =&gt;
-			({ title: folder.name()
-			, subtitle: `Move to ${folder.name()}`
-			, arg: folder.id()
-			})
-		)
-	})
-}</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Move selected note(s) to another dir</string>
-				<key>type</key>
-				<integer>7</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>AA05E36E-C4CE-441A-BC55-32A285A92C56</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>46</integer>
-				<key>hotmod</key>
-				<integer>655360</integer>
-				<key>hotstring</key>
-				<string>M</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedApps</key>
-				<array>
-					<string>com.apple.Notes</string>
-				</array>
-				<key>relatedAppsMode</key>
-				<integer>1</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>5188B463-C443-4160-8D7E-50FFB375ACC2</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(folderId)
-	tell application "Notes"		set theFolder to folder id folderId		repeat with theNote in (selection as list)			move theNote to theFolder		end repeat	end tell
-end alfred_script</string>
-				<key>cachescript</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
-			<key>uid</key>
-			<string>0CAD5FBC-89CD-4BC1-B4D9-EB45D9BCD879</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1148,25 +695,52 @@ echo $url</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
+				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
 				<key>escaping</key>
 				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
 				<key>script</key>
-				<string>osascript "$SCRIPTS_DIR/$focusedapp/$1"</string>
+				<string>query=$1
+
+osascript "$SCRIPTS_DIR/$focusedapp/$filter_script" $query
+</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>EA1EFB48-38A4-4C59-BB21-79F91926D8E2</string>
+			<string>97C65069-414E-460E-B4BD-6449492CB285</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1254,12 +828,215 @@ fi</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:filter_script}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>4</integer>
+						<key>matchstring</key>
+						<string>.+</string>
+						<key>outputlabel</key>
+						<string>filter_script</string>
+						<key>uid</key>
+						<string>BDBD7D0F-18FE-4CAD-BA8E-F75C1BA623FC</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:alfred_filter_script}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>4</integer>
+						<key>matchstring</key>
+						<string>.+</string>
+						<key>outputlabel</key>
+						<string>alfred_filter_script</string>
+						<key>uid</key>
+						<string>8992C968-BBDB-4464-8DAA-3A779F2F2AD5</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>D3FE8ADC-AF4B-467E-ABFC-6C16124E4816</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>osascript "$SCRIPTS_DIR/$focusedapp/$script" $1</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>EA1EFB48-38A4-4C59-BB21-79F91926D8E2</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>script</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>E01250D1-86A0-46B1-965C-AC31A044F472</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>query=$1
+
+osascript "$SCRIPTS_DIR/$focusedapp/$alfred_filter_script" $query
+</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>8F98715A-BCA5-48A2-AF31-87339EC00276</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>now</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>require 'json'
+
+items = []
+
+Dir.glob(File.join(ENV.fetch('SCRIPTS_DIR'), '*', 'launcher.json')).each do |f|
+	items += JSON.parse(File.read(f), symbolize_names: true)
+		.fetch(:items)
+		.select { |item| item[:keyword] }
+		.map do |item|
+			item[:match] = item[:keyword]
+			item[:variables] ||= {}
+			item[:variables][:focusedapp] = File.basename(File.dirname(f))
+			item
+		end
+end
+
+puts JSON.pretty_generate(items: items)</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Run a Process keyword 'now{query}'</string>
+				<key>type</key>
+				<integer>2</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>EF3180E5-F604-4155-ACFD-41D4BE15A379</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>A collection of various productivity shorctus created by Artem Chistyakov (https://temochka.com).
 
 CHANGELOG
 
+- 2.0.0 - Removed app-specific automations (Notes, Calendar, etc.). Can still be run as individual scripts via the improved launcher.
 - 1.4.0 - Added a "Move Note(s)" shortcut.
 - 1.3.0 - Added a custom AppleScript launcher.
 - 1.2.1 - Added documentation for the image sharing workflow.
@@ -1272,39 +1049,9 @@ CHANGELOG
 			<key>note</key>
 			<string>Update the list of available GitHub repos.</string>
 			<key>xpos</key>
-			<integer>60</integer>
+			<integer>45</integer>
 			<key>ypos</key>
-			<integer>685</integer>
-		</dict>
-		<key>0CAD5FBC-89CD-4BC1-B4D9-EB45D9BCD879</key>
-		<dict>
-			<key>xpos</key>
-			<integer>450</integer>
-			<key>ypos</key>
-			<integer>1305</integer>
-		</dict>
-		<key>13A15C1A-9875-4307-BAC5-687F781B31E8</key>
-		<dict>
-			<key>xpos</key>
-			<integer>255</integer>
-			<key>ypos</key>
-			<integer>205</integer>
-		</dict>
-		<key>1D5EE290-EBB6-4F33-95A2-3DDD0A0CF359</key>
-		<dict>
-			<key>xpos</key>
-			<integer>250</integer>
-			<key>ypos</key>
-			<integer>370</integer>
-		</dict>
-		<key>231FFF23-86C7-4E62-98EA-E4FD0544A81D</key>
-		<dict>
-			<key>note</key>
-			<string>Jump to today’s note in Notes.</string>
-			<key>xpos</key>
-			<integer>60</integer>
-			<key>ypos</key>
-			<integer>370</integer>
+			<integer>200</integer>
 		</dict>
 		<key>24F33625-57E7-4AC3-BE3B-5763DC974E44</key>
 		<dict>
@@ -1313,227 +1060,190 @@ CHANGELOG
 			<key>note</key>
 			<string>Launch the default browser</string>
 			<key>xpos</key>
-			<integer>60</integer>
+			<integer>45</integer>
 			<key>ypos</key>
-			<integer>945</integer>
+			<integer>460</integer>
 		</dict>
 		<key>25E39617-779E-4F95-A75C-3D9CE029926E</key>
 		<dict>
 			<key>note</key>
 			<string>Get a shareable link to the selected image file.</string>
 			<key>xpos</key>
-			<integer>55</integer>
+			<integer>40</integer>
 			<key>ypos</key>
-			<integer>1810</integer>
+			<integer>965</integer>
 		</dict>
 		<key>29559846-FB8F-493F-BC8F-D32F9A9E9FBA</key>
 		<dict>
 			<key>note</key>
 			<string>Upload the file, output the URL.</string>
 			<key>xpos</key>
-			<integer>505</integer>
+			<integer>490</integer>
 			<key>ypos</key>
-			<integer>1810</integer>
+			<integer>965</integer>
 		</dict>
 		<key>2B43BEE4-8D16-4118-9588-0A015C6B0671</key>
 		<dict>
 			<key>xpos</key>
-			<integer>395</integer>
+			<integer>380</integer>
 			<key>ypos</key>
-			<integer>1665</integer>
-		</dict>
-		<key>38B471A4-DEFB-4E57-8DF7-18674A9EE94E</key>
-		<dict>
-			<key>note</key>
-			<string>Jump to current/upcoming events in Calendar.</string>
-			<key>xpos</key>
-			<integer>60</integer>
-			<key>ypos</key>
-			<integer>205</integer>
-		</dict>
-		<key>455056F0-7B1F-4546-BBA3-628B58C75841</key>
-		<dict>
-			<key>xpos</key>
-			<integer>255</integer>
-			<key>ypos</key>
-			<integer>40</integer>
-		</dict>
-		<key>47AA8EE1-420B-4EB5-B52B-A112371868E4</key>
-		<dict>
-			<key>note</key>
-			<string>Jump to links in current/upcoming Calendar events.</string>
-			<key>xpos</key>
-			<integer>60</integer>
-			<key>ypos</key>
-			<integer>40</integer>
-		</dict>
-		<key>5188B463-C443-4160-8D7E-50FFB375ACC2</key>
-		<dict>
-			<key>note</key>
-			<string>Move selected note(s) to a specified directory.</string>
-			<key>xpos</key>
-			<integer>60</integer>
-			<key>ypos</key>
-			<integer>1305</integer>
-		</dict>
-		<key>51F8B285-CD19-45C0-BF57-B73C73ADC88C</key>
-		<dict>
-			<key>note</key>
-			<string>Transform a notes selection into a linked (and “Hooked”) OmniFocus task.</string>
-			<key>xpos</key>
-			<integer>60</integer>
-			<key>ypos</key>
-			<integer>1115</integer>
-		</dict>
-		<key>56ADC754-1FA5-4597-8EC5-0C9689360FB6</key>
-		<dict>
-			<key>xpos</key>
-			<integer>725</integer>
-			<key>ypos</key>
-			<integer>1115</integer>
+			<integer>820</integer>
 		</dict>
 		<key>60334227-90E9-4FD7-B3FD-E20CDE05E526</key>
 		<dict>
 			<key>xpos</key>
-			<integer>240</integer>
+			<integer>220</integer>
 			<key>ypos</key>
-			<integer>1980</integer>
+			<integer>1250</integer>
 		</dict>
 		<key>6FBFAE0C-630B-4505-8385-873C80CEACF9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>255</integer>
+			<integer>240</integer>
 			<key>ypos</key>
-			<integer>1470</integer>
+			<integer>625</integer>
 		</dict>
 		<key>7429D8D9-E915-4961-B131-27404489F47B</key>
 		<dict>
 			<key>note</key>
 			<string>Jump to a Ruby gem by name.</string>
 			<key>xpos</key>
-			<integer>60</integer>
+			<integer>45</integer>
 			<key>ypos</key>
-			<integer>1470</integer>
+			<integer>625</integer>
 		</dict>
 		<key>74A9F8C8-7D1B-4C08-9D4D-0256FA2FBEC7</key>
 		<dict>
 			<key>note</key>
 			<string>Get a shareable link to the clipped image file</string>
 			<key>xpos</key>
-			<integer>55</integer>
+			<integer>40</integer>
 			<key>ypos</key>
-			<integer>1635</integer>
+			<integer>790</integer>
 		</dict>
 		<key>7BBE72B6-F4B4-4709-A78F-555EA2B3C416</key>
 		<dict>
 			<key>xpos</key>
-			<integer>700</integer>
+			<integer>685</integer>
 			<key>ypos</key>
-			<integer>1880</integer>
+			<integer>1035</integer>
 		</dict>
 		<key>8270A01F-663B-4ADB-84F0-C4557D1DCB38</key>
 		<dict>
 			<key>note</key>
 			<string>Save clipboard contents to a temporary file.</string>
 			<key>xpos</key>
-			<integer>250</integer>
+			<integer>235</integer>
 			<key>ypos</key>
-			<integer>1635</integer>
+			<integer>790</integer>
 		</dict>
 		<key>83CD2033-1737-438B-B4BE-51067258734F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>245</integer>
+			<integer>230</integer>
 			<key>ypos</key>
-			<integer>945</integer>
+			<integer>460</integer>
 		</dict>
 		<key>860B0E10-B988-46B6-9661-6E76D127A8FB</key>
 		<dict>
 			<key>note</key>
 			<string>Run a script for the currently focused app.</string>
 			<key>xpos</key>
-			<integer>55</integer>
+			<integer>35</integer>
 			<key>ypos</key>
-			<integer>1980</integer>
+			<integer>1250</integer>
 		</dict>
 		<key>892B4FA4-38BA-4363-B137-BEF9E27D36C8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>420</integer>
+			<integer>405</integer>
 			<key>ypos</key>
-			<integer>685</integer>
+			<integer>200</integer>
 		</dict>
-		<key>95F9E365-6F5D-4D2E-A383-EB2033489E12</key>
+		<key>8F98715A-BCA5-48A2-AF31-87339EC00276</key>
 		<dict>
+			<key>note</key>
+			<string>Run the script once and let Alfred filter results.</string>
 			<key>xpos</key>
-			<integer>555</integer>
+			<integer>755</integer>
 			<key>ypos</key>
-			<integer>1115</integer>
+			<integer>1350</integer>
+		</dict>
+		<key>97C65069-414E-460E-B4BD-6449492CB285</key>
+		<dict>
+			<key>note</key>
+			<string>Show Alfred filter and run the script on every keypress.</string>
+			<key>xpos</key>
+			<integer>755</integer>
+			<key>ypos</key>
+			<integer>1165</integer>
 		</dict>
 		<key>9D49E966-8E1E-4990-A097-62C4A1E4B1E4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>245</integer>
+			<integer>230</integer>
 			<key>ypos</key>
-			<integer>685</integer>
+			<integer>200</integer>
 		</dict>
 		<key>9EE16344-0E81-4B1C-AF73-70DC25251CBB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>700</integer>
+			<integer>685</integer>
 			<key>ypos</key>
-			<integer>1745</integer>
-		</dict>
-		<key>AA05E36E-C4CE-441A-BC55-32A285A92C56</key>
-		<dict>
-			<key>xpos</key>
-			<integer>255</integer>
-			<key>ypos</key>
-			<integer>1305</integer>
+			<integer>900</integer>
 		</dict>
 		<key>B31B2832-E4A7-4796-9AB7-79B379843899</key>
 		<dict>
 			<key>xpos</key>
-			<integer>245</integer>
+			<integer>230</integer>
 			<key>ypos</key>
-			<integer>525</integer>
+			<integer>40</integer>
 		</dict>
 		<key>B94FD960-48ED-4D44-80FC-6EC955655991</key>
 		<dict>
 			<key>xpos</key>
-			<integer>245</integer>
+			<integer>230</integer>
 			<key>ypos</key>
-			<integer>815</integer>
+			<integer>330</integer>
 		</dict>
-		<key>BAA88374-72BA-44A0-84FC-E489C4AB85E4</key>
+		<key>D3FE8ADC-AF4B-467E-ABFC-6C16124E4816</key>
 		<dict>
 			<key>xpos</key>
-			<integer>255</integer>
+			<integer>485</integer>
 			<key>ypos</key>
-			<integer>1145</integer>
+			<integer>1255</integer>
 		</dict>
 		<key>DFF8F983-58A5-45E3-9368-F332D47A64EE</key>
 		<dict>
 			<key>note</key>
 			<string>Jump to one of your GitHub repos.</string>
 			<key>xpos</key>
-			<integer>60</integer>
+			<integer>45</integer>
 			<key>ypos</key>
-			<integer>525</integer>
+			<integer>40</integer>
 		</dict>
-		<key>E6F45BE8-CBBC-4D98-9791-FD50397BDF82</key>
+		<key>E01250D1-86A0-46B1-965C-AC31A044F472</key>
 		<dict>
 			<key>xpos</key>
-			<integer>380</integer>
+			<integer>390</integer>
 			<key>ypos</key>
-			<integer>1115</integer>
+			<integer>1280</integer>
 		</dict>
 		<key>EA1EFB48-38A4-4C59-BB21-79F91926D8E2</key>
 		<dict>
+			<key>note</key>
+			<string>Run the specified AppleScript.</string>
 			<key>xpos</key>
-			<integer>430</integer>
+			<integer>1005</integer>
 			<key>ypos</key>
-			<integer>1980</integer>
+			<integer>1275</integer>
+		</dict>
+		<key>EF3180E5-F604-4155-ACFD-41D4BE15A379</key>
+		<dict>
+			<key>xpos</key>
+			<integer>35</integer>
+			<key>ypos</key>
+			<integer>1410</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -1561,7 +1271,7 @@ CHANGELOG
 		<string>IMAGE_UPLOAD_SSH_USER</string>
 	</array>
 	<key>version</key>
-	<string>1.4.0</string>
+	<string>2.0.0</string>
 	<key>webaddress</key>
 	<string>https://temochka.com</string>
 </dict>

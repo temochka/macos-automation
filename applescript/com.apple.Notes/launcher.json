@@ -1,12 +1,29 @@
 {
   "items":
-    [ {
-      "title": "Copy URL of selected note",
-      "arg": "copy_note_url.scpt"
-    }
-    , {
-      "title": "Generate Vocabulary update",
-      "arg": "generate_vocabulary_update.js"
-    }
+    [ { "title": "Jump to Today’s note"
+      , "arg": "today_note.scpt"
+      , "keyword": "n"
+      , "icon": { "path": "assets/icons/sticky-note.png" }
+      }
+    , { "title": "Copy URL of selected note"
+      , "arg": "copy_note_url.scpt"
+      , "icon": { "path": "assets/icons/sticky-note.png" }
+      }
+    , { "title": "Generate Vocabulary update"
+      , "arg": "generate_vocabulary_update.scpt"
+      , "icon": { "path": "assets/icons/sticky-note.png" }
+      }
+    , { "title": "Move selected note(s)"
+      , "arg": "move_notes.scpt"
+      , "icon": { "path": "assets/icons/sticky-note.png" }
+      , "variables":
+        { "filter_placeholder_title": "Choose the destination folder..."
+        , "filter_script": "filter_destination_folders.scpt"
+        }
+      }
+    , { "title": "Selected text to OmniFocus task"
+      , "arg": "selection_to_omnifocus.scpt"
+      , "icon": { "path": "assets/icons/sticky-note.png" }
+      }
   ]
 }

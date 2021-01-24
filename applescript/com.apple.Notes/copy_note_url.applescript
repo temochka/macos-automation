@@ -1,7 +1,6 @@
 tell application "Notes"
-	set selectedNote to (get selection as record)
-	set noteId to «class seld» of selectedNote
-	set uriRow to (my getNoteUri(noteId))
+	set noteId to item 1 of (my getSelectedNoteIds())
+	set uriRow to (my getNoteUri(noteId))'s shortcutsScheme
 	set noteName to name of note id noteId in default account
 	if noteName is not equal to "" then
 		set titleRow to "“" & noteName & "”"

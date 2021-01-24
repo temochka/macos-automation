@@ -1,0 +1,20 @@
+{
+  "items":
+    [ { "title" : "Jump to a relevant link"
+      , "keyword": "l"
+      , "arg": "open_link.scpt"
+      , "icon": { "path": "assets/icons/calendar-alt.png" }
+      , "variables":
+        { "alfred_filter_script": "fetch_links.scpt"
+        }
+      }
+    , { "title": "Jump to upcoming event"
+      , "arg": "show_event.scpt"
+      , "icon": { "path": "assets/icons/calendar-alt.png" }
+      , "keyword": "c"
+      , "variables":
+        { "alfred_filter_script": "fetch_events.scpt"
+        }
+      }
+  ]
+}

@@ -1,8 +1,7 @@
 {
   "items":
-    [ {
-      "title": "Open project notes",
-      "arg": "project_notes.scpt"
+    [ { "title": "Open project notes"
+      , "arg": "project_notes.scpt"
       }
     ]
 }

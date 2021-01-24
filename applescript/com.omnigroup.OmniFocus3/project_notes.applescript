@@ -21,7 +21,7 @@ tell application "OmniFocus"
 				set theProject to myTask
 			end if
 			
-			set noteURLs to (every paragraph of theProject's note where it starts with (my NOTE_URL_PREFIX))
+			set noteURLs to (every paragraph of theProject's note where it starts with (my NOTE_SHORTCUTS_URL_PREFIX))
 			
 			if (count of noteURLs) is 0 then
 				tell application "Notes"

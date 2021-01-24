@@ -1,0 +1,1 @@
+do shell script "~/bin/ical-alfred events"

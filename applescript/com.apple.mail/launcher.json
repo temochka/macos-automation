@@ -1,8 +1,7 @@
 {
-  "items": [
-    {
-      "title": "Copy message(s) URL",
-      "arg": "copy_mail_message_url.applescript"
-    }
-  ]
+  "items":
+    [ { "title": "Copy message(s) URL"
+      , "arg": "copy_mail_message_url.scpt"
+      }
+    ]
 }

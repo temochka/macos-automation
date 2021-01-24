@@ -4,13 +4,16 @@ APPLESCRIPT := applescript/*/*.applescript
 JXA := applescript/*/*.js
 LAUNCHERS := applescript/*/launcher.json
 
-all: launchers applescript-automation jxa-automation open-note-app  alfred-workflow
+all: launchers applescript-automation jxa-automation open-note-app  alfred-workflow ical-alfred
+install:
+	cp $(OUTPUT_DIR)/cli/* ~/bin/
 clean:
 	rm -rf $(OUTPUT_DIR)
 
 target-dir:
 	mkdir -p $(OUTPUT_DIR)/applescript;
 	mkdir -p $(OUTPUT_DIR)/apps;
+	mkdir -p $(OUTPUT_DIR)/cli;
 	for dir in $$(find applescript -mindepth 1 -maxdepth 1 -not -type f); do \
 		mkdir -p $(OUTPUT_DIR)/applescript/$$(basename $$dir); \
 	done
@@ -47,11 +50,13 @@ open-note-app: apps/*
 
 alfred-workflow: AlfredProcess
 	mkdir -p $(OUTPUT_DIR);
-	$(MAKE) -C $^;
 	rm -f $(OUTPUT_DIR)/Process.alfredworkflow;
-	(cd $^ && zip ../$(OUTPUT_DIR)/Process.alfredworkflow -r . --exclude src/\* --exclude .\* --exclude Makefile);
+	(cd $^ && zip ../$(OUTPUT_DIR)/Process.alfredworkflow -r . --exclude .\*);
 
 sync-alfred-workflow: Process.alfredworkflow
 	rm -rf AlfredProcess;
 	unzip -d AlfredProcess $^;
-	$(MAKE) clean -C AlfredProcess;
+
+ical-alfred: target-dir cli/ical-alfred.swift
+	@xcrun swiftc -sdk $(shell xcrun --show-sdk-path --sdk macosx) -o $(OUTPUT_DIR)/cli/ical-alfred cli/ical-alfred.swift
+	chmod +x $(OUTPUT_DIR)/ical-alfred

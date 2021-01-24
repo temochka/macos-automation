@@ -2,45 +2,6 @@
 
 Process is a mega workflow for [Alfred](https://www.alfredapp.com) that contains a bunch of custom automations that I (Artem Chistyakov, [temochka.com](https://temochka.com)) built over the years.
 
-
-<img src="assets/icons/calendar-alt.png" width="75" alt="Calendar Icon" title="Calendar" align="right" style="background-color: #fff;">
-
-## Calendar 
-
-### Jump to event
-
-Type `nowc` into Alfred to get a list of current and upcoming events on your calendar and quickly open them in Calendar app.
-
-<img src="assets/screenshots/nowc.png" alt="Jump to event screenshot" width="600">
-
-### Jump to relevant link
-
-Type `nowl` into Alfred to get a list of links mentioned in current and upcoming events’ descriptions. Useful for quickly joining Zoom calls or jumping to time-blocked OmniFocus tasks.
-
-<img src="assets/screenshots/nowl.png" alt="Jump to event screenshot" width="600">
-
-<!-- End Calendar -->
-
-<img src="assets/icons/sticky-note.png" width="75" alt="Sticky Note Icon" title="Notes icon" align="right" style="background-color: #fff;">
-
-## Notes
-
-### Move selected note(s)
-
-Press a keyboard shortcut (e.g., <kbd>⌥</kbd>+<kbd>⇧</kbd>+<kbd>M</kbd>) to move one or more selected notes to a chosen destination folder.
-
-<img src="assets/screenshots/notes-move.png" alt="a screenshot of the Notes app with an open note titled 'Outdated Note', an Alfred prompt is asking to choose the destination folder, 'Archive' is highlighted" width="600">
-
-### Jump to daily note
-
-Type `nown` into Alfred to jump to a daily note in "🗓 Daily Notes" folder. Creates the note if doesn't exist.
-
-### Selection to OmniFocus task
-
-**Experimental.** Select any text in an edited note and turn it into a link to a new OmniFocus task. An additional bi-directional link between the note and the task is created via [Hook](https://hookproductivity.com).
-
-<!-- End Notes -->
-
 <img src="assets/icons/github.png" width="75" alt="GitHub Logo" title="GitHub" align="right" style="background-color: #fff;">
 
 ## GitHub
@@ -70,7 +31,7 @@ Type `gem <query>` to jump to a gem on Rubygems.org.
 
 ## AppleScript launcher
 
-Run a registered AppleScript automation for the currently focused app. Requires the `SCRIPTS_DIR` variable to be set. The specified directory should be structured in the following way: each supported app gets a subdirectory named after its bundle id, inside are the scripts accompanied by a `launcher.json` file written in Alfred’s [Script Filter](https://www.alfredapp.com/help/workflows/inputs/script-filter/) format. See [my AppleScript collection](https://github.com/temochka/macos-automation/tree/master/applescript) for an example.
+Run a registered AppleScript automation for the currently focused app or via a global keyword prefixed with `now` (e.g., `nowp`). Requires the `SCRIPTS_DIR` variable to be set. The specified directory should be structured in the following way: each supported app gets a subdirectory named after its bundle id containing the scripts accompanied by a `launcher.json` file written in Alfred’s [Script Filter](https://www.alfredapp.com/help/workflows/inputs/script-filter/) format. See [my AppleScript collection](https://github.com/temochka/macos-automation/tree/master/applescript) for an example.
 
 <img src="assets/screenshots/launcher.png" alt="a screenshot of a Notes app window with Alfred displayed on top of it. Alfred displays the list of registered automations." width="600">
 
