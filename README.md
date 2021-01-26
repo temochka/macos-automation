@@ -24,7 +24,7 @@ open target/Process.alfredworkflow
 
 <img src="AlfredProcess/assets/icons/calendar-alt.png" width="75" alt="Calendar Icon" title="Calendar" align="right" style="background-color: #fff;">
 
-## Calendar 
+## Calendar
 
 ### Jump to upcoming event
 
@@ -86,6 +86,14 @@ Type `nown` into Alfred to jump to a daily note in "🗓 Daily Notes" folder. Cr
 **Experimental.** Select any text in an edited note and turn it into a link to a new OmniFocus task. An additional bi-directional link between the note and the task is created via [Hook](https://hookproductivity.com).
 
 <!-- End Notes -->
+
+## OmniFocus
+
+### Link to an OmniFocus task
+
+Quickly link to any OmniFocus task or project via Alfred search. The currently active window is automatically hooked to the task.
+
+<!-- End OmniFocus -->
 
 ## Safari
 
