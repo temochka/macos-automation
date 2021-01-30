@@ -25,5 +25,12 @@
       , "arg": "selection_to_omnifocus.scpt"
       , "icon": { "path": "assets/icons/sticky-note.png" }
       }
+    , { "title": "Link to a Note..."
+      , "arg": "link_note.scpt"
+      , "icon": { "path": "assets/icons/sticky-note.png" }
+      , "variables":
+        { "filter_script": "fetch_notes.scpt"
+        }
+      }
   ]
 }

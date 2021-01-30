@@ -11,7 +11,7 @@ tell application "OmniFocus"
 	end tell
 end tell
 
-my clipTextAndHtml(taskName, "&zwnj;<a href=\"" & theTaskUrl & "\">" & taskName & "</a>&zwnj;")
+my clipTextAndHtml(taskName, "<a href=\"" & theTaskUrl & "\">" & taskName & "</a>")
 my pasteToFrontmostApp()
 
 tell application "Notes"

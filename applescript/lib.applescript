@@ -1,30 +1,24 @@
 use framework "Foundation"
 use scripting additions
 
-property NSMutableAttributedString : a reference to current application's NSMutableAttributedString
-property NSNull : a reference to current application's NSNull
 property NSDate : a reference to current application's NSDate
 property NSNumber : a reference to current application's NSNumber
-property NSPasteboardTypeRTF : a reference to current application's NSPasteboardTypeRTF
+property NSPasteboard : a reference to current application's NSPasteboard
+property NSPasteboardTypeHTML : a reference to current application's NSPasteboardTypeHTML
 property NSPasteboardTypeString : a reference to current application's NSPasteboardTypeString
-property NSRTFTextDocumentType : a reference to current application's NSRTFTextDocumentType
 property NSString : a reference to current application's NSString
-property NSUTF8StringEncoding : a reference to current application's NSUTF8StringEncoding
+property NSUTF16StringEncoding : a reference to current application's NSUTF16StringEncoding
 property NOTE_SHORTCUTS_URL_PREFIX : "shortcuts://run-shortcut?name=NoteURL&input="
 property NOTE_HOOK_URL_PREFIX : "hook://notes/dt/"
 
 on clipTextAndHtml(theText, theHtml)
-  set htmlBody to ("<html><head><meta charset=\"UTF-8\" /></head><body>" & theHtml & "</body></html>")
-	set nsStringHtmlBody to NSString's stringWithString:htmlBody
-	set htmlBodyData to nsStringHtmlBody's dataUsingEncoding:NSUTF8StringEncoding
-	set attributedString to NSMutableAttributedString's alloc()
-	attributedString's initWithHTML:htmlBodyData documentAttributes:NSNull
-	set range to {0, attributedString's |length|}
-	set theRtf to (attributedString's RTFFromRange:range documentAttributes:{DocumentType:NSRTFTextDocumentType})
-	set pb to current application's NSPasteboard's generalPasteboard()
+  set htmlBody to (theHtml)
+	set nsStringHtmlBody to NSString's stringWithString:(htmlBody & "&zwnj;")
+	set htmlBodyData to nsStringHtmlBody's dataUsingEncoding:NSUTF16StringEncoding
+	set pb to NSPasteboard's generalPasteboard()
 	pb's clearContents()
-	pb's setData:theRtf forType:NSPasteboardTypeRTF
 	pb's setString:theText forType:NSPasteboardTypeString
+  pb's setData:htmlBodyData forType:NSPasteboardTypeHTML
 end clipTextAndHtml
 
 on getSelectedNoteIds()
@@ -66,11 +60,15 @@ on reReplace(regexp, replacement, str)
 end reReplace
 
 on pasteToFrontmostApp()
-	delay 0.1
-	tell application "System Events" to keystroke space
-	tell application "System Events" to key code 123 -- left	
-	tell application "System Events" to keystroke "v" using {command down}
-	delay 0.1
-	tell application "System Events" to key code 124 -- right
-	tell application "System Events" to key code 51 -- delete
+  tell application "System Events" to keystroke "v" using {command down}
+  delay 0.1
 end pasteToFrontmostApp
+
+on hookToActiveWindow(bookmarkName, bookmarkUrl)
+  tell application "Hook"
+    set targetBookmark to bookmark from active window
+    set sourceBookmark to make new bookmark with properties {address:bookmarkUrl, name:bookmarkName, path:""}
+
+    hook sourceBookmark and targetBookmark
+  end tell
+end hookToActiveWindow

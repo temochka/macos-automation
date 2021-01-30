@@ -81,6 +81,10 @@ Press a keyboard shortcut (e.g., <kbd>⌥</kbd>+<kbd>⇧</kbd>+<kbd>M</kbd>) to 
 
 Type `nown` into Alfred to jump to a daily note in "🗓 Daily Notes" folder. Creates the note if doesn't exist.
 
+### Link to a note
+
+Insert a link to another note via Alfred search. Create a bi-directional link via Hook app.
+
 ### Selection to OmniFocus task
 
 **Experimental.** Select any text in an edited note and turn it into a link to a new OmniFocus task. An additional bi-directional link between the note and the task is created via [Hook](https://hookproductivity.com).
@@ -91,7 +95,7 @@ Type `nown` into Alfred to jump to a daily note in "🗓 Daily Notes" folder. Cr
 
 ### Link to an OmniFocus task
 
-Quickly link to any OmniFocus task or project via Alfred search. The currently active window is automatically hooked to the task.
+Insert a link to another OmniFocus task via Alfred search. Create a bi-directional link via Hook app.
 
 <!-- End OmniFocus -->
 
