@@ -31,7 +31,12 @@ Type `gem <query>` to jump to a gem on Rubygems.org.
 
 ## AppleScript launcher
 
-Run a registered AppleScript automation for the currently focused app or via a global keyword prefixed with `now` (e.g., `nowp`). Requires the `SCRIPTS_DIR` variable to be set. The specified directory should be structured in the following way: each supported app gets a subdirectory named after its bundle id containing the scripts accompanied by a `launcher.json` file written in Alfred’s [Script Filter](https://www.alfredapp.com/help/workflows/inputs/script-filter/) format. See [my AppleScript collection](https://github.com/temochka/macos-automation/tree/master/applescript) for an example.
+Run a registered AppleScript automation for the currently focused app by pressing the specified shortcut. Alternatively, run a cross-app automation via either:
+
+* `proc` keyword;
+* `[[@` snippet trigger.
+
+Requires the `SCRIPTS_DIR` variable to be set. The specified directory should be structured in the following way: each supported app gets a subdirectory named after its bundle id containing the scripts accompanied by a `launcher.json` file written in Alfred’s [Script Filter](https://www.alfredapp.com/help/workflows/inputs/script-filter/) format. See [my AppleScript collection](https://github.com/temochka/macos-automation/tree/master/applescript) for an example.
 
 <img src="assets/screenshots/launcher.png" alt="a screenshot of a Notes app window with Alfred displayed on top of it. Alfred displays the list of registered automations." width="600">
 
