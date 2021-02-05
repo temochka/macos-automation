@@ -158,6 +158,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>86AAC16C-25E7-43AD-8E55-57881E2F794C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ACA09749-533A-4D00-825B-C3EB1E396111</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>8F98715A-BCA5-48A2-AF31-87339EC00276</key>
 		<array>
 			<dict>
@@ -1092,12 +1105,41 @@ puts JSON.pretty_generate(items: items)</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string></string>
+				<key>sourcefile</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>ACA09749-533A-4D00-825B-C3EB1E396111</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>open_file</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>86AAC16C-25E7-43AD-8E55-57881E2F794C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>A collection of various productivity shorctus created by Artem Chistyakov (https://temochka.com).
 
 CHANGELOG
 
+- 3.1.0 - Added an open file action with a corresponding trigger.
 - 3.0.0 - Changed keyword to proc. Added optional snippet trigger.
 - 2.0.0 - Removed app-specific automations (Notes, Calendar, etc.). Can still be run as individual scripts via the improved launcher.
 - 1.4.0 - Added a "Move Note(s)" shortcut.
@@ -1216,6 +1258,15 @@ CHANGELOG
 			<key>ypos</key>
 			<integer>1250</integer>
 		</dict>
+		<key>86AAC16C-25E7-43AD-8E55-57881E2F794C</key>
+		<dict>
+			<key>note</key>
+			<string>Open a file in Alfred (primarily useful for viewing Contacts)</string>
+			<key>xpos</key>
+			<integer>40</integer>
+			<key>ypos</key>
+			<integer>1575</integer>
+		</dict>
 		<key>892B4FA4-38BA-4363-B137-BEF9E27D36C8</key>
 		<dict>
 			<key>xpos</key>
@@ -1234,6 +1285,8 @@ CHANGELOG
 		</dict>
 		<key>91AACB98-F18E-48FD-8113-944B4641A118</key>
 		<dict>
+			<key>note</key>
+			<string>Run a script via snippet</string>
 			<key>xpos</key>
 			<integer>35</integer>
 			<key>ypos</key>
@@ -1268,6 +1321,13 @@ CHANGELOG
 			<integer>685</integer>
 			<key>ypos</key>
 			<integer>900</integer>
+		</dict>
+		<key>ACA09749-533A-4D00-825B-C3EB1E396111</key>
+		<dict>
+			<key>xpos</key>
+			<integer>245</integer>
+			<key>ypos</key>
+			<integer>1575</integer>
 		</dict>
 		<key>B31B2832-E4A7-4796-9AB7-79B379843899</key>
 		<dict>
@@ -1348,7 +1408,7 @@ CHANGELOG
 		<string>IMAGE_UPLOAD_SSH_USER</string>
 	</array>
 	<key>version</key>
-	<string>3.0.0</string>
+	<string>3.1.0</string>
 	<key>webaddress</key>
 	<string>https://temochka.com</string>
 </dict>

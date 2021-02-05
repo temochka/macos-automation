@@ -40,6 +40,18 @@ Type `nowl` into Alfred to get a list of links mentioned in current and upcoming
 
 <!-- End Calendar -->
 
+## Contacts
+
+### Open in Alfred
+
+Contacts app is awkward to navigate with the keyboard so this is convenient for quickly copying fields to clipboard.
+
+### Link to Contact
+
+Insert a link to another contact via Alfred search. Creates a bi-directional link via Hook app.
+
+<!-- End Contacts -->
+
 ## Mail
 
 ### Copy Mail message URL

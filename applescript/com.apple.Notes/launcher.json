@@ -2,7 +2,7 @@
   "items":
     [ { "title": "Jump to Today’s note"
       , "arg": "today_note.scpt"
-      , "keyword": "t"
+      , "keyword": "tn"
       , "icon": { "path": "assets/icons/sticky-note.png" }
       }
     , { "title": "Copy URL of selected note"

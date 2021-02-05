@@ -1,0 +1,13 @@
+{
+  "items":
+    [ { "title": "Link to contact..."
+      , "arg": "link_contact.scpt"
+      , "keyword": "@"
+      , "variables" :
+        { "filter_script": "fetch_contacts.scpt" }
+      }
+    , { "title": "View in Alfred"
+      , "arg": "view_in_alfred.scpt"
+      }
+    ]
+}
