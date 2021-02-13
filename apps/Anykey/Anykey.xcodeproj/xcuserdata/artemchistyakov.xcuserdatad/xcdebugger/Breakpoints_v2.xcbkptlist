@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "9F28BAF1-F1CB-404B-9E6A-9ECC2DE9CCC1"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "52D45090-73EE-45D7-8CFA-30B57CA3C72A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Anykey/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "setupHotkeys()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D70A3302-E1A8-4FBD-B09D-945667CC0BCE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Anykey/HotkeyConfig.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "init(filePath:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BAFFBB70-1FDE-4D7A-8138-C1EEFB7BFBE6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Anykey/HotkeyConfig.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "find(modifiers:key:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BAFFBB70-1FDE-4D7A-8138-C1EEFB7BFBE6 - 1be0e5c56d758650"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Anykey.HotkeyConfig.find(modifiers: __C.NSEventModifierFlags, key: Swift.UInt32) -&gt; Swift.Optional&lt;Anykey.Hotkey&gt;"
+                  moduleName = "Anykey"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/artemchistyakov/projects/macos-automation/apps/Anykey/Anykey/HotkeyConfig.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "54">
+               </Location>
+               <Location
+                  uuid = "BAFFBB70-1FDE-4D7A-8138-C1EEFB7BFBE6 - a30296fad9ca635e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Anykey.Hotkey) -&gt; Swift.Bool in Anykey.HotkeyConfig.find(modifiers: __C.NSEventModifierFlags, key: Swift.UInt32) -&gt; Swift.Optional&lt;Anykey.Hotkey&gt;"
+                  moduleName = "Anykey"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/artemchistyakov/projects/macos-automation/apps/Anykey/Anykey/HotkeyConfig.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "146">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B008E4A5-3113-4E5B-BE10-B6A792173F4E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Anykey/KeyboardListener.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "createTap()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
