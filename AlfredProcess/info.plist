@@ -312,6 +312,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>FE1D08CA-EEFB-476C-A302-CAF7A5D48503</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E01250D1-86A0-46B1-965C-AC31A044F472</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Artem Chistyakov</string>
@@ -734,6 +747,19 @@ echo $url</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>triggerid</key>
+				<string>script</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>FE1D08CA-EEFB-476C-A302-CAF7A5D48503</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -805,7 +831,7 @@ osascript "$SCRIPTS_DIR/$focusedapp/$filter_script" $query
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>Loading scripts for {focusedapp}...</string>
+				<string>Loading scripts for {var:focusedapp}...</string>
 				<key>script</key>
 				<string>set -e
 
@@ -1139,6 +1165,7 @@ puts JSON.pretty_generate(items: items)</string>
 
 CHANGELOG
 
+- 3.2.0 - Added a trigger for the script launcher.
 - 3.1.0 - Added an open file action with a corresponding trigger.
 - 3.0.0 - Changed keyword to proc. Added optional snippet trigger.
 - 2.0.0 - Removed app-specific automations (Notes, Calendar, etc.). Can still be run as individual scripts via the improved launcher.
@@ -1197,9 +1224,9 @@ CHANGELOG
 		<key>60334227-90E9-4FD7-B3FD-E20CDE05E526</key>
 		<dict>
 			<key>xpos</key>
-			<integer>245</integer>
+			<integer>240</integer>
 			<key>ypos</key>
-			<integer>1250</integer>
+			<integer>1315</integer>
 		</dict>
 		<key>6FBFAE0C-630B-4505-8385-873C80CEACF9</key>
 		<dict>
@@ -1254,18 +1281,18 @@ CHANGELOG
 			<key>note</key>
 			<string>Run a script for the currently focused app.</string>
 			<key>xpos</key>
-			<integer>35</integer>
+			<integer>30</integer>
 			<key>ypos</key>
-			<integer>1250</integer>
+			<integer>1315</integer>
 		</dict>
 		<key>86AAC16C-25E7-43AD-8E55-57881E2F794C</key>
 		<dict>
 			<key>note</key>
 			<string>Open a file in Alfred (primarily useful for viewing Contacts)</string>
 			<key>xpos</key>
-			<integer>40</integer>
+			<integer>30</integer>
 			<key>ypos</key>
-			<integer>1575</integer>
+			<integer>1650</integer>
 		</dict>
 		<key>892B4FA4-38BA-4363-B137-BEF9E27D36C8</key>
 		<dict>
@@ -1279,34 +1306,34 @@ CHANGELOG
 			<key>note</key>
 			<string>Run the script once and let Alfred filter results.</string>
 			<key>xpos</key>
-			<integer>755</integer>
+			<integer>750</integer>
 			<key>ypos</key>
-			<integer>1350</integer>
+			<integer>1415</integer>
 		</dict>
 		<key>91AACB98-F18E-48FD-8113-944B4641A118</key>
 		<dict>
 			<key>note</key>
 			<string>Run a script via snippet</string>
 			<key>xpos</key>
-			<integer>35</integer>
+			<integer>30</integer>
 			<key>ypos</key>
-			<integer>1415</integer>
+			<integer>1480</integer>
 		</dict>
 		<key>97C65069-414E-460E-B4BD-6449492CB285</key>
 		<dict>
 			<key>note</key>
 			<string>Show Alfred filter and run the script on every keypress.</string>
 			<key>xpos</key>
-			<integer>755</integer>
+			<integer>750</integer>
 			<key>ypos</key>
-			<integer>1165</integer>
+			<integer>1230</integer>
 		</dict>
 		<key>9A0385EE-BFDA-41ED-9365-D4EBE341E4DD</key>
 		<dict>
 			<key>xpos</key>
-			<integer>180</integer>
+			<integer>175</integer>
 			<key>ypos</key>
-			<integer>1445</integer>
+			<integer>1510</integer>
 		</dict>
 		<key>9D49E966-8E1E-4990-A097-62C4A1E4B1E4</key>
 		<dict>
@@ -1325,9 +1352,9 @@ CHANGELOG
 		<key>ACA09749-533A-4D00-825B-C3EB1E396111</key>
 		<dict>
 			<key>xpos</key>
-			<integer>245</integer>
+			<integer>235</integer>
 			<key>ypos</key>
-			<integer>1575</integer>
+			<integer>1650</integer>
 		</dict>
 		<key>B31B2832-E4A7-4796-9AB7-79B379843899</key>
 		<dict>
@@ -1346,9 +1373,9 @@ CHANGELOG
 		<key>D3FE8ADC-AF4B-467E-ABFC-6C16124E4816</key>
 		<dict>
 			<key>xpos</key>
-			<integer>485</integer>
+			<integer>480</integer>
 			<key>ypos</key>
-			<integer>1255</integer>
+			<integer>1320</integer>
 		</dict>
 		<key>DFF8F983-58A5-45E3-9368-F332D47A64EE</key>
 		<dict>
@@ -1362,25 +1389,34 @@ CHANGELOG
 		<key>E01250D1-86A0-46B1-965C-AC31A044F472</key>
 		<dict>
 			<key>xpos</key>
-			<integer>415</integer>
+			<integer>410</integer>
 			<key>ypos</key>
-			<integer>1280</integer>
+			<integer>1345</integer>
 		</dict>
 		<key>EA1EFB48-38A4-4C59-BB21-79F91926D8E2</key>
 		<dict>
 			<key>note</key>
 			<string>Run the specified AppleScript.</string>
 			<key>xpos</key>
-			<integer>1005</integer>
+			<integer>1000</integer>
 			<key>ypos</key>
-			<integer>1275</integer>
+			<integer>1340</integer>
 		</dict>
 		<key>EF3180E5-F604-4155-ACFD-41D4BE15A379</key>
 		<dict>
 			<key>xpos</key>
-			<integer>245</integer>
+			<integer>240</integer>
 			<key>ypos</key>
-			<integer>1415</integer>
+			<integer>1480</integer>
+		</dict>
+		<key>FE1D08CA-EEFB-476C-A302-CAF7A5D48503</key>
+		<dict>
+			<key>note</key>
+			<string>Trigger a script externally</string>
+			<key>xpos</key>
+			<integer>240</integer>
+			<key>ypos</key>
+			<integer>1160</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -1408,7 +1444,7 @@ CHANGELOG
 		<string>IMAGE_UPLOAD_SSH_USER</string>
 	</array>
 	<key>version</key>
-	<string>3.1.0</string>
+	<string>3.2.0</string>
 	<key>webaddress</key>
 	<string>https://temochka.com</string>
 </dict>
