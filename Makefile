@@ -4,7 +4,7 @@ APPLESCRIPT := applescript/*/*.applescript
 JXA := applescript/*/*.js
 LAUNCHERS := applescript/*/launcher.json
 
-all: launchers applescript-automation jxa-automation open-note-app  alfred-workflow ical-alfred
+all: launchers applescript-automation jxa-automation open-note-app  alfred-workflow ical-alfred hotkeys
 install:
 	cp $(OUTPUT_DIR)/cli/* ~/bin/
 clean:
@@ -14,6 +14,7 @@ target-dir:
 	mkdir -p $(OUTPUT_DIR)/applescript;
 	mkdir -p $(OUTPUT_DIR)/apps;
 	mkdir -p $(OUTPUT_DIR)/cli;
+	mkdir -p $(OUTPUT_DIR)/hotkeys;
 	for dir in $$(find applescript -mindepth 1 -maxdepth 1 -not -type f); do \
 		mkdir -p $(OUTPUT_DIR)/applescript/$$(basename $$dir); \
 	done
@@ -60,3 +61,6 @@ sync-alfred-workflow: Process.alfredworkflow
 ical-alfred: target-dir cli/ical-alfred.swift
 	@xcrun swiftc -sdk $(shell xcrun --show-sdk-path --sdk macosx) -o $(OUTPUT_DIR)/cli/ical-alfred cli/ical-alfred.swift
 	chmod +x $(OUTPUT_DIR)/ical-alfred
+
+hotkeys: target-dir applescript hotkeys/Anykey.base.json
+	./hotkeys/build.rb > $(OUTPUT_DIR)/hotkeys/Anykey.json

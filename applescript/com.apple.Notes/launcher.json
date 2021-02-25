@@ -20,6 +20,10 @@
         { "filter_placeholder_title": "Choose the destination folder..."
         , "filter_script": "filter_destination_folders.scpt"
         }
+      , "anykey":
+        { "key": "m"
+        , "modifiers": ["⌥", "⇧"]
+        }
       }
     , { "title": "Selected text to OmniFocus task"
       , "arg": "selection_to_omnifocus.scpt"

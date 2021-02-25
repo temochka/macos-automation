@@ -1,0 +1,19 @@
+{
+  "hotkeys":
+  [ { "title": "Launch iTerm 2"
+    , "key": "`"
+    , "modifiers": ["⌥", "⇧"]
+    , "shellCommand": "open /Applications/iTerm.app"
+    }
+  , { "title": "Launch Music"
+    , "key": "F8"
+    , "modifiers": ["fn", "⌃"]
+    , "shellCommand": "open /System/Applications/Music.app"
+    }
+  , { "title": "Launch Process"
+    , "key": "space"
+    , "modifiers": ["⌥", "⇧"]
+    , "shellCommand": "osascript -e 'tell application \"Alfred 4\" to search \"proc\"'"
+    }
+  ]
+}

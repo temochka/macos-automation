@@ -8,6 +8,10 @@
       }
     , { "title": "View in Alfred"
       , "arg": "view_in_alfred.scpt"
+      , "anykey":
+        { "key": "return"
+        , "modifiers": ["⌘", "⇧"]
+        }
       }
     ]
 }

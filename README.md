@@ -20,7 +20,13 @@ Then install the workflow via:
 open target/Process.alfredworkflow
 ```
 
-<!-- End Process -->
+<!-- End AlfredProcess -->
+
+## Hotkeys
+
+I use an app I built called [Anykey](https://github.com/temochka/Anykey) to assign hotkeys to some of the automations. The Anykey configuration file is automatically built from individual launchers.
+
+<!-- End Hotkeys -->
 
 <img src="AlfredProcess/assets/icons/calendar-alt.png" width="75" alt="Calendar Icon" title="Calendar" align="right" style="background-color: #fff;">
 
