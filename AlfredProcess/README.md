@@ -8,7 +8,7 @@ Process is a mega workflow for [Alfred](https://www.alfredapp.com) that contains
 
 ### Jump to repository
 
-Type `gh <repo>` jump to one of your repositories on GitHub. Blazing fast, makes no API queries in real-time, allows for fuzzy-searching. Set `GITHUB_TOKEN` to a token with repository access in workflow settings. Use `gh-refresh` to periodically refresh the cache.
+Type `gh <repo>` jump to one of your repositories on GitHub. Blazing fast, makes no API queries in real-time, allows for fuzzy-searching. Hold <kbd>⌥</kbd> to copy the URL into clipboard instead of opening in the web browser. Set `GITHUB_TOKEN` to a token with repository access in workflow settings. Use `gh-refresh` to periodically refresh the cache.
 
 <img src="assets/icons/gem.png" width="75" alt="Gem Icon" title="Custom Searches" align="right" style="background-color: #fff;">
 

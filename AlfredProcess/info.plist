@@ -285,6 +285,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>F244E7D1-A9D1-4EA6-AC3E-45BE0BAAD8BA</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Copy repository URL</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>E01250D1-86A0-46B1-965C-AC31A044F472</key>
 		<array>
@@ -401,6 +411,25 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>DFF8F983-58A5-45E3-9368-F332D47A64EE</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>F244E7D1-A9D1-4EA6-AC3E-45BE0BAAD8BA</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -1165,6 +1194,7 @@ puts JSON.pretty_generate(items: items)</string>
 
 CHANGELOG
 
+- 3.3.0 - Add "copy repository URL" for the GitHub workflow.
 - 3.2.0 - Added a trigger for the script launcher.
 - 3.1.0 - Added an open file action with a corresponding trigger.
 - 3.0.0 - Changed keyword to proc. Added optional snippet trigger.
@@ -1183,7 +1213,7 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>45</integer>
 			<key>ypos</key>
-			<integer>200</integer>
+			<integer>295</integer>
 		</dict>
 		<key>24F33625-57E7-4AC3-BE3B-5763DC974E44</key>
 		<dict>
@@ -1194,7 +1224,7 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>45</integer>
 			<key>ypos</key>
-			<integer>460</integer>
+			<integer>555</integer>
 		</dict>
 		<key>25E39617-779E-4F95-A75C-3D9CE029926E</key>
 		<dict>
@@ -1203,7 +1233,7 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>40</integer>
 			<key>ypos</key>
-			<integer>965</integer>
+			<integer>1060</integer>
 		</dict>
 		<key>29559846-FB8F-493F-BC8F-D32F9A9E9FBA</key>
 		<dict>
@@ -1212,28 +1242,28 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>490</integer>
 			<key>ypos</key>
-			<integer>965</integer>
+			<integer>1060</integer>
 		</dict>
 		<key>2B43BEE4-8D16-4118-9588-0A015C6B0671</key>
 		<dict>
 			<key>xpos</key>
 			<integer>380</integer>
 			<key>ypos</key>
-			<integer>820</integer>
+			<integer>915</integer>
 		</dict>
 		<key>60334227-90E9-4FD7-B3FD-E20CDE05E526</key>
 		<dict>
 			<key>xpos</key>
 			<integer>240</integer>
 			<key>ypos</key>
-			<integer>1315</integer>
+			<integer>1410</integer>
 		</dict>
 		<key>6FBFAE0C-630B-4505-8385-873C80CEACF9</key>
 		<dict>
 			<key>xpos</key>
 			<integer>240</integer>
 			<key>ypos</key>
-			<integer>625</integer>
+			<integer>720</integer>
 		</dict>
 		<key>7429D8D9-E915-4961-B131-27404489F47B</key>
 		<dict>
@@ -1242,7 +1272,7 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>45</integer>
 			<key>ypos</key>
-			<integer>625</integer>
+			<integer>720</integer>
 		</dict>
 		<key>74A9F8C8-7D1B-4C08-9D4D-0256FA2FBEC7</key>
 		<dict>
@@ -1251,14 +1281,14 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>40</integer>
 			<key>ypos</key>
-			<integer>790</integer>
+			<integer>885</integer>
 		</dict>
 		<key>7BBE72B6-F4B4-4709-A78F-555EA2B3C416</key>
 		<dict>
 			<key>xpos</key>
 			<integer>685</integer>
 			<key>ypos</key>
-			<integer>1035</integer>
+			<integer>1130</integer>
 		</dict>
 		<key>8270A01F-663B-4ADB-84F0-C4557D1DCB38</key>
 		<dict>
@@ -1267,14 +1297,14 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>235</integer>
 			<key>ypos</key>
-			<integer>790</integer>
+			<integer>885</integer>
 		</dict>
 		<key>83CD2033-1737-438B-B4BE-51067258734F</key>
 		<dict>
 			<key>xpos</key>
 			<integer>230</integer>
 			<key>ypos</key>
-			<integer>460</integer>
+			<integer>555</integer>
 		</dict>
 		<key>860B0E10-B988-46B6-9661-6E76D127A8FB</key>
 		<dict>
@@ -1283,7 +1313,7 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>1315</integer>
+			<integer>1410</integer>
 		</dict>
 		<key>86AAC16C-25E7-43AD-8E55-57881E2F794C</key>
 		<dict>
@@ -1292,14 +1322,14 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>1650</integer>
+			<integer>1745</integer>
 		</dict>
 		<key>892B4FA4-38BA-4363-B137-BEF9E27D36C8</key>
 		<dict>
 			<key>xpos</key>
 			<integer>405</integer>
 			<key>ypos</key>
-			<integer>200</integer>
+			<integer>295</integer>
 		</dict>
 		<key>8F98715A-BCA5-48A2-AF31-87339EC00276</key>
 		<dict>
@@ -1308,7 +1338,7 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>750</integer>
 			<key>ypos</key>
-			<integer>1415</integer>
+			<integer>1510</integer>
 		</dict>
 		<key>91AACB98-F18E-48FD-8113-944B4641A118</key>
 		<dict>
@@ -1317,7 +1347,7 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>1480</integer>
+			<integer>1575</integer>
 		</dict>
 		<key>97C65069-414E-460E-B4BD-6449492CB285</key>
 		<dict>
@@ -1326,35 +1356,35 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>750</integer>
 			<key>ypos</key>
-			<integer>1230</integer>
+			<integer>1325</integer>
 		</dict>
 		<key>9A0385EE-BFDA-41ED-9365-D4EBE341E4DD</key>
 		<dict>
 			<key>xpos</key>
 			<integer>175</integer>
 			<key>ypos</key>
-			<integer>1510</integer>
+			<integer>1605</integer>
 		</dict>
 		<key>9D49E966-8E1E-4990-A097-62C4A1E4B1E4</key>
 		<dict>
 			<key>xpos</key>
 			<integer>230</integer>
 			<key>ypos</key>
-			<integer>200</integer>
+			<integer>295</integer>
 		</dict>
 		<key>9EE16344-0E81-4B1C-AF73-70DC25251CBB</key>
 		<dict>
 			<key>xpos</key>
 			<integer>685</integer>
 			<key>ypos</key>
-			<integer>900</integer>
+			<integer>995</integer>
 		</dict>
 		<key>ACA09749-533A-4D00-825B-C3EB1E396111</key>
 		<dict>
 			<key>xpos</key>
 			<integer>235</integer>
 			<key>ypos</key>
-			<integer>1650</integer>
+			<integer>1745</integer>
 		</dict>
 		<key>B31B2832-E4A7-4796-9AB7-79B379843899</key>
 		<dict>
@@ -1368,14 +1398,14 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>230</integer>
 			<key>ypos</key>
-			<integer>330</integer>
+			<integer>425</integer>
 		</dict>
 		<key>D3FE8ADC-AF4B-467E-ABFC-6C16124E4816</key>
 		<dict>
 			<key>xpos</key>
 			<integer>480</integer>
 			<key>ypos</key>
-			<integer>1320</integer>
+			<integer>1415</integer>
 		</dict>
 		<key>DFF8F983-58A5-45E3-9368-F332D47A64EE</key>
 		<dict>
@@ -1391,7 +1421,7 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>410</integer>
 			<key>ypos</key>
-			<integer>1345</integer>
+			<integer>1440</integer>
 		</dict>
 		<key>EA1EFB48-38A4-4C59-BB21-79F91926D8E2</key>
 		<dict>
@@ -1400,14 +1430,21 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>1000</integer>
 			<key>ypos</key>
-			<integer>1340</integer>
+			<integer>1435</integer>
 		</dict>
 		<key>EF3180E5-F604-4155-ACFD-41D4BE15A379</key>
 		<dict>
 			<key>xpos</key>
 			<integer>240</integer>
 			<key>ypos</key>
-			<integer>1480</integer>
+			<integer>1575</integer>
+		</dict>
+		<key>F244E7D1-A9D1-4EA6-AC3E-45BE0BAAD8BA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>230</integer>
+			<key>ypos</key>
+			<integer>170</integer>
 		</dict>
 		<key>FE1D08CA-EEFB-476C-A302-CAF7A5D48503</key>
 		<dict>
@@ -1416,7 +1453,7 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>240</integer>
 			<key>ypos</key>
-			<integer>1160</integer>
+			<integer>1255</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -1444,7 +1481,7 @@ CHANGELOG
 		<string>IMAGE_UPLOAD_SSH_USER</string>
 	</array>
 	<key>version</key>
-	<string>3.2.0</string>
+	<string>3.3.0</string>
 	<key>webaddress</key>
 	<string>https://temochka.com</string>
 </dict>
