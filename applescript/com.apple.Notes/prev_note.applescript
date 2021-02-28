@@ -3,8 +3,9 @@ tell application "Notes"
 	set theNote to note id noteId in default account
 	set theFolder to theNote's container
 	set totalNotes to count of theFolder's notes
+	set allNoteIds to ids of {ids:id} of notes 1 thru totalNotes of theFolder
 	repeat with i from 1 to totalNotes
-		if id of item i of theFolder's notes = noteId then
+		if item i of allNoteIds = noteId then
 			set prevOffset to i - 1
 			exit repeat
 		end if
