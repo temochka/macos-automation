@@ -5,6 +5,22 @@
       , "keyword": "tn"
       , "icon": { "path": "assets/icons/sticky-note.png" }
       }
+    , { "title": "Previous note"
+      , "arg": "prev_note.scpt"
+      , "icon": { "path": "assets/icons/sticky-note.png" }
+      , "anykey":
+        { "key": "["
+        , "modifiers": ["⌘", "⇧"]
+        }
+      }
+    , { "title": "Next note"
+      , "arg": "next_note.scpt"
+      , "icon": { "path": "assets/icons/sticky-note.png" }
+      , "anykey":
+        { "key": "]"
+        , "modifiers": ["⌘", "⇧"]
+        }
+      }
     , { "title": "Copy URL of selected note"
       , "arg": "copy_note_url.scpt"
       , "icon": { "path": "assets/icons/sticky-note.png" }

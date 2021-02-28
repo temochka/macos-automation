@@ -74,6 +74,10 @@ message://%3c20200219T233150.531069615694520168.noreply@letsencrypt.org%3e
 
 ## Notes
 
+### Next / previous note
+
+Annoyingly, there’s no shortcut in Notes to go to next or previous note. This script fixes it. Press <kbd>⌘</kbd>+<kbd>⇧</kbd>+<kbd>[</kbd> or <kbd>⌘</kbd>+<kbd>⇧</kbd>+<kbd>[</kbd> (like Safari tabs) to navigate between notes in sidebar.
+
 ### Open Note URL / Copy Note URL
 
 Apple Notes doesn’t provide URLs that work reliably across devices. I link to my notes using the following URLs format
