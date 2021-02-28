@@ -2,18 +2,6 @@
 
 Process is a mega workflow for [Alfred](https://www.alfredapp.com) that contains a bunch of custom automations that I (Artem Chistyakov, [temochka.com](https://temochka.com)) built over the years.
 
-<img src="assets/icons/github.png" width="75" alt="GitHub Logo" title="GitHub" align="right" style="background-color: #fff;">
-
-## GitHub
-
-### Jump to repository
-
-Type `gh <repo>` jump to one of your repositories on GitHub. Blazing fast, makes no API queries in real-time, allows for fuzzy-searching. Hold <kbd>⌥</kbd> to copy the URL into clipboard instead of opening in the web browser. Set `GITHUB_TOKEN` to a token with repository access in workflow settings. Use `gh-refresh` to periodically refresh the cache.
-
-<img src="assets/icons/gem.png" width="75" alt="Gem Icon" title="Custom Searches" align="right" style="background-color: #fff;">
-
-<!-- End GitHub -->
-
 ## Custom searches
 
 I like to add my searches as workflows because it makes it easier to sync them across multiple machines (I don’t use Dropbox sync).
@@ -22,10 +10,25 @@ I like to add my searches as workflows because it makes it easier to sync them a
 
 Type `gem <query>` to jump to a gem on Rubygems.org.
 
+<img src="assets/icons/github.png" width="75" alt="GitHub Logo" title="GitHub" align="right" style="background-color: #fff;">
+
+### GitHub
+
+Type `gh <repo>` jump to one of your repositories on GitHub. Blazing fast, makes no API queries in real-time, allows for fuzzy-searching. Hold <kbd>⌥</kbd> to copy the URL into clipboard instead of opening in the web browser. Set `GITHUB_TOKEN` to a token with repository access in workflow settings. Use `gh-refresh` to periodically refresh the cache.
+
+<img src="assets/icons/gem.png" width="75" alt="Gem Icon" title="Custom Searches" align="right" style="background-color: #fff;">
+
+<!-- End GitHub -->
+
+### Jekyll
+
+I use this in combination with my [jekyll-alfred_json](https://github.com/temochka/jekyll-alfred_json) plugin. Type `blog <title>` to fuzzy-search blog posts. Can insert public URLs, open the Markdown file for editing or even generate Liquid permalinks for quickly inserting into new posts when writing.
+
+
+<!-- End searches -->
 
 <img src="assets/icons/cogs.png" width="75" alt="Cogs Icon" title="Misc" align="right" style="background-color: #fff;">
 
-<!-- End searches -->
 
 ## Misc
 

@@ -31,6 +31,49 @@
 				<false/>
 			</dict>
 		</array>
+		<key>0DDBF416-B4E9-4CF1-AE60-99D4E4629F1F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>24182F95-1EA2-48DC-8667-1E82805D8E5D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>0C5F654C-C659-47AF-8AA2-09EAB2DA532D</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>View Markdown</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>95F7B85B-319E-4070-A74D-AF047F40C0A5</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Copy post URL</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>342B77B6-BD11-4CF5-A21C-101A775EA06C</string>
+				<key>modifiers</key>
+				<integer>655360</integer>
+				<key>modifiersubtext</key>
+				<string>Copy Liquid link</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>24F33625-57E7-4AC3-BE3B-5763DC974E44</key>
 		<array>
 			<dict>
@@ -349,25 +392,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>{query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>B31B2832-E4A7-4796-9AB7-79B379843899</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -417,6 +441,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>B31B2832-E4A7-4796-9AB7-79B379843899</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>autopaste</key>
 				<true/>
 				<key>clipboardtext</key>
@@ -457,6 +500,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Refresh completed</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>892B4FA4-38BA-4363-B137-BEF9E27D36C8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -487,27 +551,6 @@
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>Refresh completed</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>892B4FA4-38BA-4363-B137-BEF9E27D36C8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
 				<string>This takes some time</string>
 				<key>title</key>
 				<string>Refreshing bookmarks in the background</string>
@@ -516,6 +559,25 @@
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>B94FD960-48ED-4D44-80FC-6EC955655991</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://duckduckgo.com</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>83CD2033-1737-438B-B4BE-51067258734F</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -549,25 +611,6 @@
 			<string>24F33625-57E7-4AC3-BE3B-5763DC974E44</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://duckduckgo.com</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>83CD2033-1737-438B-B4BE-51067258734F</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -839,6 +882,37 @@ osascript "$SCRIPTS_DIR/$focusedapp/$filter_script" $query
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>44</integer>
+				<key>hotmod</key>
+				<integer>655360</integer>
+				<key>hotstring</key>
+				<string>/</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>860B0E10-B988-46B6-9661-6E76D127A8FB</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -890,37 +964,6 @@ fi</string>
 			<string>60334227-90E9-4FD7-B3FD-E20CDE05E526</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<true/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>44</integer>
-				<key>hotmod</key>
-				<integer>655360</integer>
-				<key>hotstring</key>
-				<string>/</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>860B0E10-B988-46B6-9661-6E76D127A8FB</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1163,6 +1206,19 @@ puts JSON.pretty_generate(items: items)</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>triggerid</key>
+				<string>open_file</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>86AAC16C-25E7-43AD-8E55-57881E2F794C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>openwith</key>
 				<string></string>
 				<key>sourcefile</key>
@@ -1178,15 +1234,123 @@ puts JSON.pretty_generate(items: items)</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>triggerid</key>
-				<string>open_file</string>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>blog</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading blog posts...</string>
+				<key>script</key>
+				<string>cat $JEKYLL_ALFRED_MANIFEST</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search blog posts</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>86AAC16C-25E7-43AD-8E55-57881E2F794C</string>
+			<string>0DDBF416-B4E9-4CF1-AE60-99D4E4629F1F</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>24182F95-1EA2-48DC-8667-1E82805D8E5D</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string></string>
+				<key>sourcefile</key>
+				<string>{var:filename}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>0C5F654C-C659-47AF-8AA2-09EAB2DA532D</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>95F7B85B-319E-4070-A74D-AF047F40C0A5</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{var:liquid_link}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>342B77B6-BD11-4CF5-A21C-101A775EA06C</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -1194,6 +1358,7 @@ puts JSON.pretty_generate(items: items)</string>
 
 CHANGELOG
 
+- 3.4.0 - Add Jekyll search.
 - 3.3.0 - Add "copy repository URL" for the GitHub workflow.
 - 3.2.0 - Added a trigger for the script launcher.
 - 3.1.0 - Added an open file action with a corresponding trigger.
@@ -1214,6 +1379,33 @@ CHANGELOG
 			<integer>45</integer>
 			<key>ypos</key>
 			<integer>295</integer>
+		</dict>
+		<key>0C5F654C-C659-47AF-8AA2-09EAB2DA532D</key>
+		<dict>
+			<key>note</key>
+			<string>View Markdown</string>
+			<key>xpos</key>
+			<integer>285</integer>
+			<key>ypos</key>
+			<integer>2070</integer>
+		</dict>
+		<key>0DDBF416-B4E9-4CF1-AE60-99D4E4629F1F</key>
+		<dict>
+			<key>note</key>
+			<string>Fuzzy search a Jekyll blog (requires my jekyll-alfred_json plugin)</string>
+			<key>xpos</key>
+			<integer>30</integer>
+			<key>ypos</key>
+			<integer>1930</integer>
+		</dict>
+		<key>24182F95-1EA2-48DC-8667-1E82805D8E5D</key>
+		<dict>
+			<key>note</key>
+			<string>Open in browser</string>
+			<key>xpos</key>
+			<integer>285</integer>
+			<key>ypos</key>
+			<integer>1930</integer>
 		</dict>
 		<key>24F33625-57E7-4AC3-BE3B-5763DC974E44</key>
 		<dict>
@@ -1250,6 +1442,15 @@ CHANGELOG
 			<integer>380</integer>
 			<key>ypos</key>
 			<integer>915</integer>
+		</dict>
+		<key>342B77B6-BD11-4CF5-A21C-101A775EA06C</key>
+		<dict>
+			<key>note</key>
+			<string>Copy Liquid link to the post</string>
+			<key>xpos</key>
+			<integer>285</integer>
+			<key>ypos</key>
+			<integer>2350</integer>
 		</dict>
 		<key>60334227-90E9-4FD7-B3FD-E20CDE05E526</key>
 		<dict>
@@ -1348,6 +1549,15 @@ CHANGELOG
 			<integer>30</integer>
 			<key>ypos</key>
 			<integer>1575</integer>
+		</dict>
+		<key>95F7B85B-319E-4070-A74D-AF047F40C0A5</key>
+		<dict>
+			<key>note</key>
+			<string>Copy post URL</string>
+			<key>xpos</key>
+			<integer>285</integer>
+			<key>ypos</key>
+			<integer>2210</integer>
 		</dict>
 		<key>97C65069-414E-460E-B4BD-6449492CB285</key>
 		<dict>
@@ -1468,20 +1678,23 @@ CHANGELOG
 		<string></string>
 		<key>IMAGE_UPLOAD_WEBROOT_PATH</key>
 		<string></string>
+		<key>JEKYLL_ALFRED_MANIFEST</key>
+		<string></string>
 		<key>SCRIPTS_DIR</key>
 		<string></string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
-		<string>GITHUB_TOKEN</string>
+		<string>JEKYLL_ALFRED_MANIFEST</string>
 		<string>IMAGE_UPLOAD_HOSTNAME</string>
+		<string>IMAGE_UPLOAD_SSH_USER</string>
 		<string>SCRIPTS_DIR</string>
 		<string>IMAGE_UPLOAD_SSH_HOSTNAME</string>
 		<string>IMAGE_UPLOAD_WEBROOT_PATH</string>
-		<string>IMAGE_UPLOAD_SSH_USER</string>
+		<string>GITHUB_TOKEN</string>
 	</array>
 	<key>version</key>
-	<string>3.3.0</string>
+	<string>3.4.0</string>
 	<key>webaddress</key>
 	<string>https://temochka.com</string>
 </dict>
