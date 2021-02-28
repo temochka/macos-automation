@@ -3,6 +3,9 @@
     [ { "title": "Open project notes"
       , "arg": "project_notes.scpt"
       }
+    , { "title": "Time block in Calendar"
+      , "arg": "time_block.scpt"
+      }
     , { "title": "Insert task link..."
       , "arg": "link_task.scpt"
       , "keyword": "t"

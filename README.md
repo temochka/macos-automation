@@ -115,6 +115,10 @@ Insert a link to another note via Alfred search. Create a bi-directional link vi
 
 Insert a link to another OmniFocus task via Alfred search. Create a bi-directional link via Hook app.
 
+### Time block
+
+Block an hour starting now on the “Time Blocks” calendar for the selected task or project. Back-link the task from the created event, then show it in Calendar. Can then use <kbd>⌃</kbd>+<kbd>⌥</kbd>+<kbd>Down</kbd> / <kbd>⌃</kbd>+<kbd>⌥</kbd>+<kbd>Up</kbd> to move the event around.
+
 <!-- End OmniFocus -->
 
 ## Safari
