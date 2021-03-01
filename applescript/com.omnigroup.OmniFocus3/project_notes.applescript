@@ -29,7 +29,7 @@ tell application "OmniFocus"
           set noteBody to "<h1>" & theProject's name & "</h1><p><a href=" & taskUrl & ">" & taskUrl & "</a></p><ul><li></li></ul>"
           set newNote to make new note in default account at folder "Notes" with properties {body: noteBody}
           set noteId to «class seld» of (newNote as record)
-          set noteURL to (my getNoteUri(noteId))
+          set noteURL to shortcutsScheme of (my getNoteUri(noteId))
         end tell
         tell theProject
           insert noteURL & "
