@@ -25,7 +25,7 @@ on getSelectedNoteIds()
   tell application "Notes"
     set ids to {}
     repeat with theNote in (selection as list)
-      set ids to ids & {theNote's id}
+      set ids to ids & {«class seld» of (theNote as record)}
     end repeat
     return ids
   end tell
