@@ -1,5 +1,5 @@
 tell application "Notes"
-	set noteId to id of (item 1 of (selection as list))
+	set noteId to item 1 of my getSelectedNoteIds()
 	set theNote to note id noteId in default account
 	set theFolder to theNote's container
 	set totalNotes to count of theFolder's notes
