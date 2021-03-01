@@ -54,7 +54,7 @@ on getSelectedText()
 end getSelectedText
 
 on reReplace(regexp, replacement, str)
-	set pattern to "s/" & regexp & "/" & replacement & "/gi"
+	set pattern to "s/" & regexp & "/" & replacement & "/g"
 	set sed to "sed -E " & quoted form of pattern
 	do shell script "echo " & (quoted form of str) & " | " & sed
 end reReplace
