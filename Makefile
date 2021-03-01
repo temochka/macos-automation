@@ -60,7 +60,7 @@ sync-alfred-workflow: Process.alfredworkflow
 
 ical-alfred: target-dir cli/ical-alfred.swift
 	@xcrun swiftc -sdk $(shell xcrun --show-sdk-path --sdk macosx) -o $(OUTPUT_DIR)/cli/ical-alfred cli/ical-alfred.swift
-	chmod +x $(OUTPUT_DIR)/ical-alfred
+	chmod +x $(OUTPUT_DIR)/cli/ical-alfred
 
 hotkeys: target-dir applescript hotkeys/Anykey.base.json
 	./hotkeys/build.rb > $(OUTPUT_DIR)/hotkeys/Anykey.json
