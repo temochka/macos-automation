@@ -2,7 +2,7 @@ on filteredContacts(query)
   tell application "Contacts"
     repeat with i from 0 to 4
       try
-        set matches to {ids:id, names:name} of (people 1 thru (5 - i) whose last name contains query or first name contains query)
+        set matches to {ids:id, names:name} of (people 1 thru (5 - i) whose name contains query)
         return matches
       on error errMsg number n
         if n is not -1719 and n is not -1728 then
