@@ -63,39 +63,33 @@ func getEvents(store: EKEventStore) -> NSDictionary {
 
 func getLinks(store: EKEventStore) -> NSDictionary {
     let now = Date()
-    let endOfDay = Calendar.current.startOfDay(for: now + 3600*24)
+    let endOfDay = Calendar.current.startOfDay(for: now + 3600 * 24)
     let eventFilter = store.predicateForEvents(withStart: now, end: endOfDay, calendars: nil)
-    let currentEvent = store
+    let links = store
         .events(matching: eventFilter)
         .filter { !$0.isAllDay && $0.status != .canceled && !isDeclined(event: $0) }
-        .min(by: {
-            abs($0.startDate.timeIntervalSince(now)) < abs($1.startDate.timeIntervalSince(now))
-        })
-        
-    if let currentEvent = currentEvent {
-        let allTextFields = "\(currentEvent.title ?? "")\n\(currentEvent.notes ?? "")\n\(currentEvent.location ?? "")\n\(currentEvent.url?.absoluteString ?? "")"
-        let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
-        let alfredItems = detector
-            .matches(in: allTextFields, options: [], range: NSMakeRange(0, allTextFields.count))
-            .compactMap { (match) -> NSDictionary? in
-                if let url = match.url {
-                    return [
-                        "title": "\(currentEvent.title ?? "N/A") - \(urlName(url: url))",
-                        "subtitle": url.absoluteString,
-                        "arg": url.absoluteString,
-                    ]
+        .prefix(5)
+        .flatMap { (event) -> [NSDictionary] in
+            let allTextFields = "\(event.title ?? "")\n\(event.notes ?? "")\n\(event.location ?? "")\n\(event.url?.absoluteString ?? "")"
+            let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
+            return detector
+                .matches(in: allTextFields, options: [], range: NSMakeRange(0, allTextFields.count))
+                .compactMap { (match) -> NSDictionary? in
+                    if let url = match.url {
+                        return [
+                            "title": "\(event.title ?? "N/A") - \(urlName(url: url))",
+                            "subtitle": url.absoluteString,
+                            "arg": url.absoluteString,
+                        ]
+                    }
+                    return nil
                 }
-                return nil
-            }
-            
-        let alfredEnvelope: NSDictionary = [
-            "items": alfredItems
-        ]
+        }
+    let alfredEnvelope: NSDictionary = [
+        "items": links + [["title" : "Jump to Today", "subtitle" : "Open Today in Calendar", "arg": ""]]
+    ]
 
-        return alfredEnvelope
-    }
-
-    return [:]
+    return alfredEnvelope
 }
 
 func toJSON(dict: NSDictionary) -> String {
