@@ -74,6 +74,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>1CA2C0DF-8DB1-4BF1-A88F-A013179E31B1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EE4AE2B3-CA71-4C69-BAC1-8AF057798801</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>24F33625-57E7-4AC3-BE3B-5763DC974E44</key>
 		<array>
 			<dict>
@@ -231,7 +244,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>9A0385EE-BFDA-41ED-9365-D4EBE341E4DD</string>
+				<string>EE4AE2B3-CA71-4C69-BAC1-8AF057798801</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -253,11 +266,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>9A0385EE-BFDA-41ED-9365-D4EBE341E4DD</key>
+		<key>9D49E966-8E1E-4990-A097-62C4A1E4B1E4</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>EF3180E5-F604-4155-ACFD-41D4BE15A379</string>
+				<string>892B4FA4-38BA-4363-B137-BEF9E27D36C8</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -266,11 +279,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>9D49E966-8E1E-4990-A097-62C4A1E4B1E4</key>
+		<key>C72E6C7D-9850-4DF6-BD6E-D8D88511B43E</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>892B4FA4-38BA-4363-B137-BEF9E27D36C8</string>
+				<string>EF3180E5-F604-4155-ACFD-41D4BE15A379</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -352,11 +365,24 @@
 				<false/>
 			</dict>
 		</array>
+		<key>EE4AE2B3-CA71-4C69-BAC1-8AF057798801</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C72E6C7D-9850-4DF6-BD6E-D8D88511B43E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>EF3180E5-F604-4155-ACFD-41D4BE15A379</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>E01250D1-86A0-46B1-965C-AC31A044F472</string>
+				<string>EA1EFB48-38A4-4C59-BB21-79F91926D8E2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -847,11 +873,11 @@ echo $url</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
-				<true/>
+				<false/>
 				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
 				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
@@ -952,7 +978,7 @@ fi</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Run script</string>
+				<string>Run script for {var:focusedapp}</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -1017,7 +1043,7 @@ fi</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>osascript "$SCRIPTS_DIR/$focusedapp/$script" $1</string>
+				<string>osascript "$SCRIPTS_DIR/$script" $1</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1042,7 +1068,7 @@ fi</string>
 				<key>variables</key>
 				<dict>
 					<key>script</key>
-					<string>{query}</string>
+					<string>{var:focusedapp}/{query}</string>
 				</dict>
 			</dict>
 			<key>type</key>
@@ -1110,7 +1136,7 @@ osascript "$SCRIPTS_DIR/$focusedapp/$alfred_filter_script" $query
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>keyword</key>
-				<string>@</string>
+				<string>[</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.snippet</string>
@@ -1123,7 +1149,7 @@ osascript "$SCRIPTS_DIR/$focusedapp/$alfred_filter_script" $query
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
-				<true/>
+				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
 				<key>argumenttreatemptyqueryasnil</key>
@@ -1148,24 +1174,47 @@ osascript "$SCRIPTS_DIR/$focusedapp/$alfred_filter_script" $query
 				<string></string>
 				<key>script</key>
 				<string>require 'json'
+require 'shellwords'
+require 'securerandom'
+require 'tmpdir'
 
-items = []
+query = ARGV[0]
+keywords = JSON.parse(File.read(File.join(ENV['SCRIPTS_DIR'], 'meta_launcher.json')), symbolize_names: true).transform_keys(&amp;:to_s)
+cache_filename = File.join(Dir.tmpdir, "com.temochka.alfred.process-#{ENV.fetch('PROCESS_RUN_ID', SecureRandom.uuid)}")
 
-Dir.glob(File.join(ENV.fetch('SCRIPTS_DIR'), '*', 'launcher.json')).each do |f|
-	items += JSON.parse(File.read(f), symbolize_names: true)
-		.fetch(:items)
-		.select { |item| item[:keyword] }
-		.sort_by { |item| item[:keyword] }
-		.map do |item|
-			item[:match] = item[:keyword]
-			item[:title] = "#{item[:keyword]} - #{item[:title]}"
-			item[:variables] ||= {}
-			item[:variables][:focusedapp] = File.basename(File.dirname(f))
-			item
-		end
+if query.nil? || query.empty?
+  puts JSON.pretty_generate(items: keywords.values)
+  exit 0
 end
 
-puts JSON.pretty_generate(items: items)</string>
+matching_keywords = keywords.select do |keyword, item|
+  has_filter = item.dig(:variables, :alfred_filter_script) || item.dig(:variables, :filter_script)
+  query == keyword || keyword.start_with?(query) || query.start_with?(keyword) &amp;&amp; has_filter
+end
+
+match = matching_keywords.values.first if matching_keywords.size == 1 &amp;&amp; query.start_with?(matching_keywords.keys.first)
+filter_query = match &amp;&amp; query.gsub(/^#{Regexp.quote(matching_keywords.keys.first)}/, '')
+
+if match &amp;&amp; match.dig(:variables, :alfred_filter_script)
+  output =
+    if File.exists?(cache_filename)
+      File.read(cache_filename)
+    else
+      `osascript #{File.join(ENV['SCRIPTS_DIR'], match.dig(:variables, :alfred_filter_script)).shellescape}`.tap do |output|
+        File.open(cache_filename, 'w') { |f| f &lt;&lt; output }
+      end
+    end
+  
+  parsed_output = JSON.parse(output, symbolize_names: true)
+  matching_items = parsed_output.fetch(:items).select { |i| (i[:match] ? i[:match] : i[:title]) =~ /\b#{Regexp.quote(filter_query)}/i }
+  puts JSON.pretty_generate(items: matching_items, variables: match[:variables])
+elsif match &amp;&amp; match.dig(:variables, :filter_script)
+  parsed_output = JSON.parse(`osascript #{File.join(ENV['SCRIPTS_DIR'], match.dig(:variables, :filter_script)).shellescape} #{filter_query.shellescape}`)
+  puts JSON.pretty_generate(parsed_output.merge(variables: match[:variables]))
+else
+  puts JSON.pretty_generate(items: matching_keywords.values)
+end
+</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1189,19 +1238,66 @@ puts JSON.pretty_generate(items: items)</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.random</string>
+			<key>uid</key>
+			<string>EE4AE2B3-CA71-4C69-BAC1-8AF057798801</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
-				<dict/>
+				<dict>
+					<key>PROCESS_RUN_ID</key>
+					<string>{query}</string>
+				</dict>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>9A0385EE-BFDA-41ED-9365-D4EBE341E4DD</string>
+			<string>C72E6C7D-9850-4DF6-BD6E-D8D88511B43E</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>49</integer>
+				<key>hotmod</key>
+				<integer>655360</integer>
+				<key>hotstring</key>
+				<string>Space</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>1CA2C0DF-8DB1-4BF1-A88F-A013179E31B1</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1358,6 +1454,7 @@ puts JSON.pretty_generate(items: items)</string>
 
 CHANGELOG
 
+- 4.0.0 - Faster, more interactive launcher. Added a hotkey to launch Process keywords.
 - 3.4.0 - Add Jekyll search.
 - 3.3.0 - Add "copy repository URL" for the GitHub workflow.
 - 3.2.0 - Added a trigger for the script launcher.
@@ -1387,7 +1484,7 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>285</integer>
 			<key>ypos</key>
-			<integer>2070</integer>
+			<integer>2165</integer>
 		</dict>
 		<key>0DDBF416-B4E9-4CF1-AE60-99D4E4629F1F</key>
 		<dict>
@@ -1396,7 +1493,14 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>1930</integer>
+			<integer>2025</integer>
+		</dict>
+		<key>1CA2C0DF-8DB1-4BF1-A88F-A013179E31B1</key>
+		<dict>
+			<key>xpos</key>
+			<integer>30</integer>
+			<key>ypos</key>
+			<integer>1720</integer>
 		</dict>
 		<key>24182F95-1EA2-48DC-8667-1E82805D8E5D</key>
 		<dict>
@@ -1405,7 +1509,7 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>285</integer>
 			<key>ypos</key>
-			<integer>1930</integer>
+			<integer>2025</integer>
 		</dict>
 		<key>24F33625-57E7-4AC3-BE3B-5763DC974E44</key>
 		<dict>
@@ -1450,7 +1554,7 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>285</integer>
 			<key>ypos</key>
-			<integer>2350</integer>
+			<integer>2445</integer>
 		</dict>
 		<key>60334227-90E9-4FD7-B3FD-E20CDE05E526</key>
 		<dict>
@@ -1523,7 +1627,7 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>1745</integer>
+			<integer>1840</integer>
 		</dict>
 		<key>892B4FA4-38BA-4363-B137-BEF9E27D36C8</key>
 		<dict>
@@ -1557,7 +1661,7 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>285</integer>
 			<key>ypos</key>
-			<integer>2210</integer>
+			<integer>2305</integer>
 		</dict>
 		<key>97C65069-414E-460E-B4BD-6449492CB285</key>
 		<dict>
@@ -1567,13 +1671,6 @@ CHANGELOG
 			<integer>750</integer>
 			<key>ypos</key>
 			<integer>1325</integer>
-		</dict>
-		<key>9A0385EE-BFDA-41ED-9365-D4EBE341E4DD</key>
-		<dict>
-			<key>xpos</key>
-			<integer>175</integer>
-			<key>ypos</key>
-			<integer>1605</integer>
 		</dict>
 		<key>9D49E966-8E1E-4990-A097-62C4A1E4B1E4</key>
 		<dict>
@@ -1594,7 +1691,7 @@ CHANGELOG
 			<key>xpos</key>
 			<integer>235</integer>
 			<key>ypos</key>
-			<integer>1745</integer>
+			<integer>1840</integer>
 		</dict>
 		<key>B31B2832-E4A7-4796-9AB7-79B379843899</key>
 		<dict>
@@ -1609,6 +1706,13 @@ CHANGELOG
 			<integer>230</integer>
 			<key>ypos</key>
 			<integer>425</integer>
+		</dict>
+		<key>C72E6C7D-9850-4DF6-BD6E-D8D88511B43E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>295</integer>
+			<key>ypos</key>
+			<integer>1605</integer>
 		</dict>
 		<key>D3FE8ADC-AF4B-467E-ABFC-6C16124E4816</key>
 		<dict>
@@ -1642,10 +1746,17 @@ CHANGELOG
 			<key>ypos</key>
 			<integer>1435</integer>
 		</dict>
+		<key>EE4AE2B3-CA71-4C69-BAC1-8AF057798801</key>
+		<dict>
+			<key>xpos</key>
+			<integer>220</integer>
+			<key>ypos</key>
+			<integer>1605</integer>
+		</dict>
 		<key>EF3180E5-F604-4155-ACFD-41D4BE15A379</key>
 		<dict>
 			<key>xpos</key>
-			<integer>240</integer>
+			<integer>390</integer>
 			<key>ypos</key>
 			<integer>1575</integer>
 		</dict>
@@ -1694,7 +1805,7 @@ CHANGELOG
 		<string>GITHUB_TOKEN</string>
 	</array>
 	<key>version</key>
-	<string>3.4.0</string>
+	<string>4.0.0</string>
 	<key>webaddress</key>
 	<string>https://temochka.com</string>
 </dict>

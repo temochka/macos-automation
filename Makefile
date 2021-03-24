@@ -19,11 +19,12 @@ target-dir:
 		mkdir -p $(OUTPUT_DIR)/applescript/$$(basename $$dir); \
 	done
 
-launchers: target-dir $(LAUNCHERS)
+launchers: target-dir applescript/meta_launcher.rb $(LAUNCHERS)
 	mkdir -p $(OUTPUT_DIR)/applescript;
 	for launcher in $(LAUNCHERS); do \
 		cp $$launcher target/$$launcher; \
 	done
+	./applescript/meta_launcher.rb > $(OUTPUT_DIR)/applescript/meta_launcher.json
 
 applescript-automation: target-dir $(APPLESCRIPT)
 	for script in $(APPLESCRIPT); do \
