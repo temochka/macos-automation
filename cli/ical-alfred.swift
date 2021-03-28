@@ -36,22 +36,31 @@ func urlName(url: URL) -> String {
     }
 }
 
-func getEvents(store: EKEventStore) -> NSDictionary {
+func getEvents(store: EKEventStore, until: Date, query: String?, calendars: [EKCalendar]) -> NSDictionary {
     let now = Date()
-    let tomorrow = now + 3600 * 24
     let dateFormatter = DateFormatter()
     dateFormatter.dateStyle = .none
     dateFormatter.timeStyle = .short
-    let eventFilter = store.predicateForEvents(withStart: now, end: tomorrow, calendars: nil)
+    let eventFilter = store.predicateForEvents(withStart: now, end: until, calendars: calendars)
     let matchingEvents = store
         .events(matching: eventFilter)
-        .filter { !$0.isAllDay && $0.status != .canceled && !isDeclined(event: $0) }
+        .filter {
+            !$0.isAllDay &&
+                $0.status != .canceled &&
+                !isDeclined(event: $0) &&
+                (query == nil || query! == "" || ($0.title ?? "").lowercased().contains(query!.lowercased()))
+        }
         .prefix(5)
         .map { (event) -> NSDictionary in
+            let title = event.title ?? "Untitled event"
             return [
-                "title": event.title ?? "Untitled event",
+                "title": title,
                 "subtitle": "\(tomorrowLabel(date: event.startDate))\(dateFormatter.string(from: event.startDate))-\(dateFormatter.string(from: event.endDate))",
-                "arg": "{\"eventId\":\"\(event.eventIdentifier ?? "")\",\"calendarId\":\"\(event.calendar?.calendarIdentifier ?? "")\"}",
+                "arg": toJSON(dict: [
+                    "eventId": event.eventIdentifier ?? "",
+                    "calendarId": event.calendar?.calendarIdentifier ?? "",
+                    "title": title,
+                ]),
             ]
         }
     let alfredEnvelope: NSDictionary = [
@@ -61,10 +70,10 @@ func getEvents(store: EKEventStore) -> NSDictionary {
     return alfredEnvelope
 }
 
-func getLinks(store: EKEventStore) -> NSDictionary {
+func getLinks(store: EKEventStore, calendars: [EKCalendar]) -> NSDictionary {
     let now = Date()
     let endOfDay = Calendar.current.startOfDay(for: now + 3600 * 24)
-    let eventFilter = store.predicateForEvents(withStart: now, end: endOfDay, calendars: nil)
+    let eventFilter = store.predicateForEvents(withStart: now, end: endOfDay, calendars: calendars)
     let links = store
         .events(matching: eventFilter)
         .filter { !$0.isAllDay && $0.status != .canceled && !isDeclined(event: $0) }
@@ -100,6 +109,16 @@ func toJSON(dict: NSDictionary) -> String {
     return ""
 }
 
+func fromJSON<T>(json: String) -> T? {
+    return try? JSONSerialization.jsonObject(with: json.data(using: .utf8)!, options: []) as? T
+}
+
+
+func calendarsExceptThese(names: [String], store: EKEventStore) -> [EKCalendar] {
+    return store
+        .calendars(for: EKEntityType.event)
+        .filter { !names.contains($0.title.trimmingCharacters(in: .whitespacesAndNewlines)) }
+}
 
 let store = EKEventStore()
 
@@ -116,12 +135,17 @@ if EKEventStore.authorizationStatus(for: .event) != .authorized {
     }
 }
 
+let env = ProcessInfo.processInfo.environment
+let calendars: [EKCalendar] = calendarsExceptThese(names: fromJSON(json: env["IGNORE_CALENDARS", default: "[]"])!, store: store)
+
 if (CommandLine.arguments.count > 1) {
     switch CommandLine.arguments[1] {
     case "events":
-        print(toJSON(dict: getEvents(store: store)))
+        print(toJSON(dict: getEvents(store: store, until: Date() + 3600 * 24, query: nil, calendars: calendars)))
+    case "search":
+        print(toJSON(dict: getEvents(store: store, until: Date() + 3600 * 24 * 30, query: CommandLine.arguments.count > 2 ? CommandLine.arguments[2] : "", calendars: calendars)))
     case "links":
-        print(toJSON(dict: getLinks(store: store)))
+        print(toJSON(dict: getLinks(store: store, calendars: calendars)))
     default:
         print("Unknown command. Known commands are: events, links.")
     }

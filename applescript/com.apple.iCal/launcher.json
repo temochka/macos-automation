@@ -16,5 +16,13 @@
         { "alfred_filter_script": "fetch_events.scpt"
         }
       }
+      , { "title": "Link to event"
+        , "arg": "link_event.scpt"
+        , "icon": { "path": "assets/icons/calendar-alt.png" }
+        , "keyword": "e"
+        , "variables":
+          { "filter_script": "search_events.scpt"
+          }
+        }
   ]
 }

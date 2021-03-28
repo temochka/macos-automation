@@ -44,6 +44,10 @@ Type `nowl` into Alfred to get a list of links mentioned in current and upcoming
 
 <img src="assets/screenshots/nowl.png" alt="Jump to event screenshot" width="600">
 
+### Link to event
+
+Insert a link to an event via Alfred search. Creates a bi-directional link via Hook app.
+
 <!-- End Calendar -->
 
 ## Contacts
