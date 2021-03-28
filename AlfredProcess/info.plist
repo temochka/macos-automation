@@ -1043,7 +1043,7 @@ fi</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>osascript "$SCRIPTS_DIR/$script" $1</string>
+				<string>osascript "$SCRIPTS_DIR/$script" "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1454,6 +1454,7 @@ end
 
 CHANGELOG
 
+- 4.1.0 - Added IGNORE_CALENDARS config variable to control the same value in ical-alfred.
 - 4.0.0 - Faster, more interactive launcher. Added a hotkey to launch Process keywords.
 - 3.4.0 - Add Jekyll search.
 - 3.3.0 - Add "copy repository URL" for the GitHub workflow.
@@ -1781,6 +1782,8 @@ CHANGELOG
 	<dict>
 		<key>GITHUB_TOKEN</key>
 		<string></string>
+		<key>IGNORE_CALENDARS</key>
+		<string></string>
 		<key>IMAGE_UPLOAD_HOSTNAME</key>
 		<string></string>
 		<key>IMAGE_UPLOAD_SSH_HOSTNAME</key>
@@ -1803,9 +1806,10 @@ CHANGELOG
 		<string>IMAGE_UPLOAD_SSH_HOSTNAME</string>
 		<string>IMAGE_UPLOAD_WEBROOT_PATH</string>
 		<string>GITHUB_TOKEN</string>
+		<string>IGNORE_CALENDARS</string>
 	</array>
 	<key>version</key>
-	<string>4.0.0</string>
+	<string>4.1.0</string>
 	<key>webaddress</key>
 	<string>https://temochka.com</string>
 </dict>
