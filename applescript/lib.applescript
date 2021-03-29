@@ -45,12 +45,9 @@ on getNoteUri(noteId)
 end getNoteUri
 
 on getSelectedText()
-  set clipboardBefore to the clipboard
   tell application "System Events" to keystroke "c" using {command down}
   delay 0.1
-  set selectedText to (the clipboard as string)
-  set the clipboard to clipboardBefore
-  return selectedText
+  return (the clipboard as string)
 end getSelectedText
 
 on reReplace(regexp, replacement, str)
