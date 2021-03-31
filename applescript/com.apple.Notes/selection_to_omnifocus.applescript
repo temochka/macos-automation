@@ -1,7 +1,8 @@
 tell application "Notes"
 	activate
-	set selectedText to my getSelectedText()
-	set taskName to my reReplace("^([-* ]|\\[|\\])+", "", selectedText)
+	set currentSelection to my getSelection()
+	set taskName to my reReplace("^([-* ]|\\[|\\])+", "", currentSelection's |text|)
+	set taskNote to currentSelection's |url|
 end tell
 
 tell application "OmniFocus"
@@ -21,7 +22,7 @@ tell application "Notes"
 end tell
 
 tell application "OmniFocus"
-	set theTask's note to (noteUri's shortcutsScheme)
+	set theTask's note to taskNote & "\n\n" & (noteUri's shortcutsScheme)
 end tell
 
 tell application "Hook"

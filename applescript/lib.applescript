@@ -44,11 +44,31 @@ on getNoteUri(noteId)
   end tell
 end getNoteUri
 
-on getSelectedText()
+-- Cheers to user3439894 for this beautiful hack
+-- https://apple.stackexchange.com/questions/417833/how-to-convert-applescript-url-type-to-string#417835
+on urlToString(theURL)
+  set tmpfile to (do shell script "mktemp")
+  set fhandle to open for access tmpfile with write permission
+  write theURL to fhandle
+  close access fhandle
+  read tmpfile
+end urlToString
+
+on getClipboardUrl()
+  try
+    my urlToString(the clipboard as URL)
+  on error errMsg number n
+    if n = -1700 then -- No URL in the clipboard
+      return missing value
+    end if
+  end try
+end getClipboardUrl
+
+on getSelection()
   tell application "System Events" to keystroke "c" using {command down}
   delay 0.1
-  return (the clipboard as string)
-end getSelectedText
+  return {|text|: (the clipboard as string), |url|: getClipboardUrl()}
+end getSelection
 
 on reReplace(regexp, replacement, str)
 	set pattern to "s/" & regexp & "/" & replacement & "/g"
