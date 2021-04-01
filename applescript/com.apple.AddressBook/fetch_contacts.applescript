@@ -50,6 +50,8 @@ on run argv
       set end of alfredItems to {|title|:item i of matchingRecords's names, arg:item i of matchingRecords's ids}
     end repeat
 
+    set end of alfredItems to {|title|:("Create " & query & "..."), arg:"", |variables|: {|create_contact|: query}}
+
     tell application "JSON Helper"
       return make JSON from {|items|:alfredItems}
     end tell
