@@ -58,3 +58,13 @@ The workflow requires the following workflow variables to be set in Alfred:
 * `IMAGE_UPLOAD_SSH_HOSTNAME` - the hostname that provides SSH access to your image hosting server’s filesystem;
 * `IMAGE_UPLOAD_SSH_USER` - the SSH user to use when connecting to the server;
 * `IMAGE_UPLOAD_WEBROOT_PATH` - the server path where to put the uploaded file;
+
+### Clipboard manipulation
+
+Convert current clipboard contents to any of the following formats (if possible):
+
+* text
+* raw HTML
+* RTF interpreted as HTML
+* Markdown table
+* URL

@@ -87,6 +87,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>23A38372-612F-4F6E-A2EF-299C84ED493B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A44E8961-A954-44CE-B709-E187A0BDB50D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>24F33625-57E7-4AC3-BE3B-5763DC974E44</key>
 		<array>
 			<dict>
@@ -271,6 +284,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>892B4FA4-38BA-4363-B137-BEF9E27D36C8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A44E8961-A954-44CE-B709-E187A0BDB50D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FA97B13A-AFA4-4731-8224-3E1A9D4659B9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1222,7 +1248,7 @@ end
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Run a Process keyword 'now{query}'</string>
+				<string>Run a Process keyword 'proc{query}'</string>
 				<key>type</key>
 				<integer>2</integer>
 				<key>withspace</key>
@@ -1448,12 +1474,137 @@ end
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>9</integer>
+				<key>hotmod</key>
+				<integer>1703936</integer>
+				<key>hotstring</key>
+				<string>V</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>23A38372-612F-4F6E-A2EF-299C84ED493B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtextrtf</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf2578
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0\c84706\cname controlTextColor;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf2 \{query\}}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>FA97B13A-AFA4-4731-8224-3E1A9D4659B9</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>pb</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>require 'json'
+
+pasteboard_contents = JSON.parse(`~/bin/pb`)
+MAPPINGS = {
+	'html' =&gt; 'Paste as original HTML',
+	'rtfAsHtml' =&gt; 'Paste as generated HTML',
+	'asMarkdownTable' =&gt; 'Paste as Markdown table',
+	'url' =&gt; 'Paste as URL',
+	'text' =&gt; 'Paste as text',
+}
+
+alfred_items = pasteboard_contents.compact.map do |k, v|
+	{
+		title: MAPPINGS.fetch(k, k),
+		arg: v
+	}
+end
+
+puts JSON.generate(items: alfred_items)
+</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>2</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>A44E8961-A954-44CE-B709-E187A0BDB50D</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>A collection of various productivity shorctus created by Artem Chistyakov (https://temochka.com).
 
 CHANGELOG
 
+- 4.2.0 - Added pb keyword to manipulate clipboard contents.
 - 4.1.0 - Added IGNORE_CALENDARS config variable to control the same value in ical-alfred.
 - 4.0.0 - Faster, more interactive launcher. Added a hotkey to launch Process keywords.
 - 3.4.0 - Add Jekyll search.
@@ -1502,6 +1653,13 @@ CHANGELOG
 			<integer>30</integer>
 			<key>ypos</key>
 			<integer>1720</integer>
+		</dict>
+		<key>23A38372-612F-4F6E-A2EF-299C84ED493B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>25</integer>
+			<key>ypos</key>
+			<integer>2615</integer>
 		</dict>
 		<key>24182F95-1EA2-48DC-8667-1E82805D8E5D</key>
 		<dict>
@@ -1687,6 +1845,15 @@ CHANGELOG
 			<key>ypos</key>
 			<integer>995</integer>
 		</dict>
+		<key>A44E8961-A954-44CE-B709-E187A0BDB50D</key>
+		<dict>
+			<key>note</key>
+			<string>Manipulate clipboard contents</string>
+			<key>xpos</key>
+			<integer>215</integer>
+			<key>ypos</key>
+			<integer>2615</integer>
+		</dict>
 		<key>ACA09749-533A-4D00-825B-C3EB1E396111</key>
 		<dict>
 			<key>xpos</key>
@@ -1768,6 +1935,13 @@ CHANGELOG
 			<key>ypos</key>
 			<integer>170</integer>
 		</dict>
+		<key>FA97B13A-AFA4-4731-8224-3E1A9D4659B9</key>
+		<dict>
+			<key>xpos</key>
+			<integer>405</integer>
+			<key>ypos</key>
+			<integer>2615</integer>
+		</dict>
 		<key>FE1D08CA-EEFB-476C-A302-CAF7A5D48503</key>
 		<dict>
 			<key>note</key>
@@ -1809,7 +1983,7 @@ CHANGELOG
 		<string>IGNORE_CALENDARS</string>
 	</array>
 	<key>version</key>
-	<string>4.1.0</string>
+	<string>4.2.0</string>
 	<key>webaddress</key>
 	<string>https://temochka.com</string>
 </dict>
