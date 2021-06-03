@@ -12,7 +12,7 @@ property NOTE_SHORTCUTS_URL_PREFIX : "shortcuts://run-shortcut?name=NoteURL&inpu
 property NOTE_HOOK_URL_PREFIX : "hook://notes/dt/"
 
 on clipTextAndHtml(theText, theHtml)
-  set htmlBody to (theHtml)
+  set htmlBody to theHtml
 	set nsStringHtmlBody to NSString's stringWithString:(htmlBody & "&zwnj;")
 	set htmlBodyData to nsStringHtmlBody's dataUsingEncoding:NSUTF16StringEncoding
 	set pb to NSPasteboard's generalPasteboard()
