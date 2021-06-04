@@ -3,6 +3,9 @@ tell application "Notes"
 	set currentSelection to my getSelection()
 	set taskName to my reReplace("^([-* ]|\\[|\\])+", "", currentSelection's |text|)
 	set taskNote to currentSelection's |url|
+	if taskNote is missing value then
+		set taskNote to ""
+	end if
 end tell
 
 tell application "OmniFocus"
