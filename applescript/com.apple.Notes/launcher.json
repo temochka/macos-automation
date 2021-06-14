@@ -13,6 +13,18 @@
         , "modifiers": ["⌘", "⇧"]
         }
       }
+    , { "title": "Go to link"
+      , "arg": "open_link.scpt"
+      , "icon": { "path": "assets/icons/sticky-note.png" }
+      , "variables":
+        { "filter_placeholder_title": "Choose the destination link..."
+        , "filter_script": "extract_links.scpt"
+        }
+      , "anykey":
+        { "key": "g"
+        , "modifiers": ["⌥", "⇧"]
+        }
+      }
     , { "title": "Next note"
       , "arg": "next_note.scpt"
       , "icon": { "path": "assets/icons/sticky-note.png" }
