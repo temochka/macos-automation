@@ -6,7 +6,7 @@ tell application "Notes"
 	try
 		set theNoteId to id of first note in folder DAILY_NOTES_FOLDER whose name = noteTitle
 	on error
-		set noteBody to "<html><body><div><h1>" & noteTitle & "</h1><ul><li>&nbsp;</li></ul></div></body></html>"
+		set noteBody to "<h1>" & noteTitle & "</h1>"
 		set theNoteId to id of (make new note in folder DAILY_NOTES_FOLDER in default account with properties {body:noteBody})
 	end try
 	show note id theNoteId
