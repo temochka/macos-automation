@@ -3,6 +3,13 @@
     [ { "title": "Open highlighted link"
       , "arg": "open_highlighted_link.scpt"
       }
+    , { "title": "Copy Splunk value"
+      , "arg": "copy_splunk_value.scpt"
+      , "anykey":
+        { "key": "c"
+        , "modifiers": ["⌘", "⇧"]
+        }
+      }
     , { "title": "Safari tab to OmniFocus"
       , "arg": "safari_tab_to_omnifocus.scpt"
       }
