@@ -6,5 +6,8 @@
     , { "title": "Safari tab to OmniFocus"
       , "arg": "safari_tab_to_omnifocus.scpt"
       }
+    , { "title": "Copy GitHub issue/PR link"
+      , "arg": "github_link.scpt"
+      }
     ]
 }

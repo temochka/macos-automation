@@ -139,4 +139,8 @@ Safari doesn’t automatically focus elements highlighted via search by page (li
 
 I could never figure out how to quickly add a Safari web page to OmniFocus (so it puts the page title into task and URL as a note) so I wrote this shortcut. Works for me!
 
+### Copy GitHub issue/PR link
+
+GitHub allows linking to issues and PRs using the following short format: owner/repo#issue. I’m not aware of an easy way to quickly produce a link in this format. This script closes this gap for me.
+
 <!-- End Safari -->
