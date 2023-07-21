@@ -82,7 +82,7 @@ on pasteToFrontmostApp()
 end pasteToFrontmostApp
 
 on hookToActiveWindow(bookmarkName, bookmarkUrl)
-  tell application "Hook"
+  tell application "Hookmark"
     set targetBookmark to bookmark from active window
     set sourceBookmark to make new bookmark with properties {address:bookmarkUrl, name:bookmarkName, path:""}
 

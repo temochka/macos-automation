@@ -28,7 +28,7 @@ tell application "OmniFocus"
 	set theTask's note to taskNote & "\n\n" & (noteUri's shortcutsScheme)
 end tell
 
-tell application "Hook"
+tell application "Hookmark"
 	set theNoteHook to make new bookmark with properties {address:(noteUri's hookScheme), name:noteName, path:""}
 	set theTaskHook to make new bookmark with properties {address:theTaskUrl, name:taskName, path:""}
 	hook theNoteHook and theTaskHook
