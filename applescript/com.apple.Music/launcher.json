@@ -1,0 +1,11 @@
+{
+  "items":
+    [ { "title": "Copy current track id"
+      , "arg": "copy_current_track_id.scpt"
+      }
+    , { "title": "Paste current track offset to the frontmost app"
+      , "arg": "insert_song_timestamp.applescript"
+      , "keyword": "1"
+      }
+    ]
+}
