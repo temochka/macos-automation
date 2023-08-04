@@ -62,6 +62,14 @@ Insert a link to another contact via Alfred search. Creates a bi-directional lin
 
 <!-- End Contacts -->
 
+## Finder
+
+### Add/edit tags
+
+Trigger the "Add/Edit tags" toolbar action for the selected file(s). The only way to assign a keyboard shortcut to this action, AFAIK.
+
+<!-- End Finder -->
+
 ## Mail
 
 ### Copy Mail message URL

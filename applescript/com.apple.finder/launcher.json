@@ -1,0 +1,11 @@
+{
+  "items":
+    [ { "title": "Add/edit tags"
+      , "arg": "add_or_edit_tags.scpt"
+      , "anykey":
+        { "key": "9"
+        , "modifiers": ["⌃"]
+        }
+      }
+    ]
+}
