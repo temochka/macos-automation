@@ -9,7 +9,6 @@ property NSPasteboardTypeString : a reference to current application's NSPastebo
 property NSString : a reference to current application's NSString
 property NSUTF16StringEncoding : a reference to current application's NSUTF16StringEncoding
 property NOTE_SHORTCUTS_URL_PREFIX : "shortcuts://run-shortcut?name=NoteURL&input="
-property NOTE_HOOK_URL_PREFIX : "hook://notes/dt/"
 
 on clipTextAndHtml(theText, theHtml)
   set htmlBody to theHtml
@@ -21,28 +20,6 @@ on clipTextAndHtml(theText, theHtml)
   pb's setData:htmlBodyData forType:NSPasteboardTypeHTML
 end clipTextAndHtml
 
-on getSelectedNoteIds()
-  tell application "Notes"
-    set ids to {}
-    repeat with theNote in (selection as list)
-      set ids to ids & {«class seld» of (theNote as record)}
-    end repeat
-    return ids
-  end tell
-end getSelectedNoteIds
-
-on getNoteUri(noteId)
-  tell application "Notes"
-    set noteCreated to (creation date) of note id noteId in default account
-    set cocoaDate to NSDate's dateWithTimeInterval:0 sinceDate:noteCreated
-    set doubleNoteTimestamp to cocoaDate's timeIntervalSince1970
-    set intNoteTimestamp to intValue of (NSNumber's numberWithDouble:doubleNoteTimestamp)
-    set stringNoteTimestamp to stringValue of (NSNumber's numberWithInt:intNoteTimestamp)
-    set shortcutsUri to (my NOTE_SHORTCUTS_URL_PREFIX) & stringNoteTimestamp
-    set hookUri to (my NOTE_HOOK_URL_PREFIX) & stringNoteTimestamp
-    return {shortcutsScheme: shortcutsUri, hookScheme: hookUri}
-  end tell
-end getNoteUri
 
 -- Cheers to user3439894 for this beautiful hack
 -- https://apple.stackexchange.com/questions/417833/how-to-convert-applescript-url-type-to-string#417835
@@ -80,12 +57,3 @@ on pasteToFrontmostApp()
   tell application "System Events" to keystroke "v" using {command down}
   delay 0.1
 end pasteToFrontmostApp
-
-on hookToActiveWindow(bookmarkName, bookmarkUrl)
-  tell application "Hookmark"
-    set targetBookmark to bookmark from active window
-    set sourceBookmark to make new bookmark with properties {address:bookmarkUrl, name:bookmarkName, path:""}
-
-    hook sourceBookmark and targetBookmark
-  end tell
-end hookToActiveWindow

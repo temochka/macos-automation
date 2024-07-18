@@ -4,7 +4,7 @@ APPLESCRIPT := applescript/*/*.applescript
 JXA := applescript/*/*.js
 LAUNCHERS := applescript/*/launcher.json
 
-all: launchers applescript-automation jxa-automation open-note-app  alfred-workflow ical-alfred pb hotkeys
+all: launchers applescript-automation jxa-automation alfred-workflow ical-alfred pb hotkeys
 install:
 	cp $(OUTPUT_DIR)/cli/* ~/bin/
 clean:
@@ -40,14 +40,6 @@ jxa-automation: target-dir $(JXA)
 		filename=$$(basename $$script | sed -E s/\.[^.]+$$//); \
 		echo $$filename; \
 		osacompile -l JavaScript -o $(OUTPUT_DIR)/applescript/$$dirname/$$filename.scpt $$script; \
-	done
-
-open-note-app: target-dir apps/*
-	for script_app in apps/*; do \
-		filename=$$(basename $$script_app); \
-		cat applescript/lib.applescript $$script_app/main.applescript | osacompile -o $(OUTPUT_DIR)/apps/$$filename; \
-		cp -rf $$script_app/Contents $(OUTPUT_DIR)/apps/$$filename/; \
-		codesign --force --deep -s - $(OUTPUT_DIR)/apps/$$filename; \
 	done
 
 alfred-workflow: AlfredProcess
