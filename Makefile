@@ -59,5 +59,9 @@ pb: target-dir cli/pb.swift
 	@xcrun swiftc -sdk $(shell xcrun --show-sdk-path --sdk macosx) -o $(OUTPUT_DIR)/cli/pb cli/pb.swift
 	chmod +x $(OUTPUT_DIR)/cli/pb
 
+bm: target-dir cli/bm.c
+	gcc -O3 -o $(OUTPUT_DIR)/cli/bm cli/bm.c
+	chmod +x $(OUTPUT_DIR)/cli/bm
+
 hotkeys: target-dir applescript hotkeys/Anykey.base.json
 	./hotkeys/build.rb > $(OUTPUT_DIR)/hotkeys/Anykey.json
