@@ -40,12 +40,13 @@ void print_escaped_json_string(const char *c_str, size_t length) {
 }
 
 void print_matches_string(const char *str, size_t length) {
-    const char *delim = "[]-/\"'";
+    const char *delim = "[]()-/\"'";
     char buf[BUFFER_SIZE];
     strcpy(buf, str);
     char *token = strtok(buf, delim);
 
     while (token != NULL) {
+        putc(' ', stdout);
         print_escaped_json_string(token, strlen(token));
         token = strtok(NULL, delim);
     }
