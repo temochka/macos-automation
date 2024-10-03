@@ -68,3 +68,23 @@ Convert current clipboard contents to any of the following formats (if possible)
 * RTF interpreted as HTML
 * Markdown table
 * URL
+
+### Bookmarks
+
+Process provides an interface to my radically simple plain text bookmarks manager. Bookmarks are stored in a markdown file in my home directory (`~/.bookmarks.md`) in the following format:
+
+```
+# Titles are ignored
+
+Bookmark 1
+https://example.org/1
+
+## This title is also ignored
+
+Bookmark 2
+https://example.org/2
+```
+
+Those bookmarks are searchable via Alfred's Script Filter, like this:
+
+<img src="assets/screenshots/go.png" alt="a screenshot of an Alfred window with entered 'go elm' command showing a list of bookmarks matching 'Elm' keyword." width="600">
