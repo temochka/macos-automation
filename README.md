@@ -46,7 +46,7 @@ Type `nowl` into Alfred to get a list of links mentioned in current and upcoming
 
 ### Link to event
 
-Insert a link to an event via Alfred search. Creates a bi-directional link via Hook app.
+Insert a link to an event via Alfred search.
 
 <!-- End Calendar -->
 
@@ -58,7 +58,7 @@ Contacts app is awkward to navigate with the keyboard so this is convenient for 
 
 ### Link to Contact
 
-Insert a link to another contact via Alfred search. Creates a bi-directional link via Hook app.
+Insert a link to another contact via Alfred search.
 
 <!-- End Contacts -->
 
