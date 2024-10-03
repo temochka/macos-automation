@@ -102,6 +102,8 @@ int main(int argc, const char* argv[]) {
                 }
                 printf("    {\"title\":\"");
                 print_escaped_json_string(title, title_length);
+                printf("\",\"subtitle\":\"");
+                print_escaped_json_string(buf, length);
                 printf("\",\"arg\":\"");
                 print_escaped_json_string(buf, length);
                 printf("\",\"matches\":\"");
