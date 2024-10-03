@@ -4,7 +4,7 @@ APPLESCRIPT := applescript/*/*.applescript
 JXA := applescript/*/*.js
 LAUNCHERS := applescript/*/launcher.json
 
-all: launchers applescript-automation jxa-automation alfred-workflow ical-alfred pb hotkeys
+all: launchers applescript-automation jxa-automation alfred-workflow ical-alfred pb bm hotkeys
 install:
 	cp $(OUTPUT_DIR)/cli/* ~/bin/
 clean:
