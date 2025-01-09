@@ -18,7 +18,6 @@ Dir.glob(File.join(__dir__, '*', 'launcher.json')).each do |f|
 
       raise "Duplicate keyword #{keyword}" if keywords.key?(keyword)
 
-
       keywords[keyword] = {
         title: "#{keyword} - #{title}",
         arg: File.join(focused_app, arg),

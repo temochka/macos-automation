@@ -22,7 +22,9 @@ target-dir:
 launchers: target-dir applescript/meta_launcher.rb $(LAUNCHERS)
 	mkdir -p $(OUTPUT_DIR)/applescript;
 	for launcher in $(LAUNCHERS); do \
-		cp $$launcher target/$$launcher; \
+		cat $$launcher \
+			| jq '.items |= map(if .anykey then (.subtitle = ((.anykey.modifiers + [ .anykey.key ]) | join("+"))) | del(.anykey) else . end)' \
+			> target/$$launcher; \
 	done
 	./applescript/meta_launcher.rb > $(OUTPUT_DIR)/applescript/meta_launcher.json
 
