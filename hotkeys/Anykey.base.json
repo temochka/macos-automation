@@ -1,9 +1,9 @@
 {
   "hotkeys":
-  [ { "title": "Launch iTerm 2"
+  [ { "title": "Launch Ghostty"
     , "key": "`"
     , "modifiers": ["⌥", "⇧"]
-    , "shellCommand": "open /Applications/iTerm.app"
+    , "shellCommand": "open /Applications/Ghostty.app"
     }
   , { "title": "Launch Music"
     , "key": "F8"
