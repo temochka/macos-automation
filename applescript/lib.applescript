@@ -11,15 +11,12 @@ property NSUTF16StringEncoding : a reference to current application's NSUTF16Str
 property NOTE_SHORTCUTS_URL_PREFIX : "shortcuts://run-shortcut?name=NoteURL&input="
 
 on clipTextAndHtml(theText, theHtml)
-  set htmlBody to theHtml
-	set nsStringHtmlBody to NSString's stringWithString:(htmlBody & "&zwnj;")
-	set htmlBodyData to nsStringHtmlBody's dataUsingEncoding:NSUTF16StringEncoding
+	set htmlBody to theHtml & "&zwnj;"
 	set pb to NSPasteboard's generalPasteboard()
 	pb's clearContents()
 	pb's setString:theText forType:NSPasteboardTypeString
-  pb's setData:htmlBodyData forType:NSPasteboardTypeHTML
+	pb's setString:htmlBody forType:NSPasteboardTypeHTML
 end clipTextAndHtml
-
 
 -- Cheers to user3439894 for this beautiful hack
 -- https://apple.stackexchange.com/questions/417833/how-to-convert-applescript-url-type-to-string#417835
