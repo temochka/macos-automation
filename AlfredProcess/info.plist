@@ -583,6 +583,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>FDE1DA05-7608-4A59-ABA1-EA8C9A0D3306</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E4EFB0D8-6141-4F67-9A7C-8EA8A3B9766C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>FE1D08CA-EEFB-476C-A302-CAF7A5D48503</key>
 		<array>
 			<dict>
@@ -2222,6 +2235,40 @@ function run(argv) {
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputmode</key>
+				<integer>0</integer>
+				<key>outputmode</key>
+				<integer>0</integer>
+				<key>shortcut</key>
+				<string>Copy iCloud Link</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.automation.runshortcut</string>
+			<key>uid</key>
+			<string>E4EFB0D8-6141-4F67-9A7C-8EA8A3B9766C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<integer>1</integer>
+				<key>filetypes</key>
+				<array/>
+				<key>name</key>
+				<string>Copy iCloud Link</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>FDE1DA05-7608-4A59-ABA1-EA8C9A0D3306</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>A collection of various productivity shorctus created by Artem Chistyakov (https://temochka.com).
@@ -2319,7 +2366,7 @@ CHANGELOG
 			<key>xpos</key>
 			<real>445</real>
 			<key>ypos</key>
-			<real>3105</real>
+			<real>3170</real>
 		</dict>
 		<key>29559846-FB8F-493F-BC8F-D32F9A9E9FBA</key>
 		<dict>
@@ -2365,7 +2412,7 @@ CHANGELOG
 			<key>xpos</key>
 			<real>605</real>
 			<key>ypos</key>
-			<real>3175</real>
+			<real>3240</real>
 		</dict>
 		<key>60334227-90E9-4FD7-B3FD-E20CDE05E526</key>
 		<dict>
@@ -2553,7 +2600,7 @@ CHANGELOG
 			<key>xpos</key>
 			<real>295</real>
 			<key>ypos</key>
-			<real>3155</real>
+			<real>3220</real>
 		</dict>
 		<key>B86BCE3C-449C-49B5-B244-7B5D7E32E810</key>
 		<dict>
@@ -2581,7 +2628,7 @@ CHANGELOG
 			<key>xpos</key>
 			<real>200</real>
 			<key>ypos</key>
-			<real>3275</real>
+			<real>3340</real>
 		</dict>
 		<key>C72E6C7D-9850-4DF6-BD6E-D8D88511B43E</key>
 		<dict>
@@ -2602,7 +2649,7 @@ CHANGELOG
 			<key>xpos</key>
 			<real>445</real>
 			<key>ypos</key>
-			<real>3250</real>
+			<real>3315</real>
 		</dict>
 		<key>D3FE8ADC-AF4B-467E-ABFC-6C16124E4816</key>
 		<dict>
@@ -2626,6 +2673,13 @@ CHANGELOG
 			<real>410</real>
 			<key>ypos</key>
 			<real>1440</real>
+		</dict>
+		<key>E4EFB0D8-6141-4F67-9A7C-8EA8A3B9766C</key>
+		<dict>
+			<key>xpos</key>
+			<real>215</real>
+			<key>ypos</key>
+			<real>3485</real>
 		</dict>
 		<key>EA1EFB48-38A4-4C59-BB21-79F91926D8E2</key>
 		<dict>
@@ -2664,6 +2718,13 @@ CHANGELOG
 			<key>ypos</key>
 			<real>2615</real>
 		</dict>
+		<key>FDE1DA05-7608-4A59-ABA1-EA8C9A0D3306</key>
+		<dict>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>3485</real>
+		</dict>
 		<key>FE1D08CA-EEFB-476C-A302-CAF7A5D48503</key>
 		<dict>
 			<key>note</key>
@@ -2678,7 +2739,7 @@ CHANGELOG
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>3165</real>
+			<real>3230</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
