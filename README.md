@@ -94,4 +94,8 @@ Safari doesn’t automatically focus elements highlighted via search by page (li
 
 GitHub allows linking to issues and PRs using the following short format: owner/repo#issue. I’m not aware of an easy way to quickly produce a link in this format. This script closes this gap for me.
 
+### Copy link as Markdown
+
+Copies the URL and title of the current tab as a Markdown link.
+
 <!-- End Safari -->

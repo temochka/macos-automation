@@ -10,8 +10,8 @@
         , "modifiers": ["⌘", "⇧"]
         }
       }
-    , { "title": "Safari tab to OmniFocus"
-      , "arg": "safari_tab_to_omnifocus.scpt"
+    , { "title": "Copy link as Markdown"
+      , "arg": "markdown_link.scpt"
       }
     , { "title": "Copy GitHub issue/PR link"
       , "arg": "github_link.scpt"
