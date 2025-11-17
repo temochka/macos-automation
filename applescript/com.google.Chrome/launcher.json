@@ -1,6 +1,6 @@
 {
   "items":
-    [ { "title": "Copy page link as Markdown"
+    [ { "title": "Copy link as Markdown"
       , "arg": "copy_page_link_as_markdown.scpt"
       }
     ]

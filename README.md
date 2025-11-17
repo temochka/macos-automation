@@ -99,3 +99,11 @@ GitHub allows linking to issues and PRs using the following short format: owner/
 Copies the URL and title of the current tab as a Markdown link.
 
 <!-- End Safari -->
+
+## Google Chrome
+
+### Copy link as Markdown
+
+Copies the URL and title of the current tab as a Markdown link.
+
+<!-- End Chrome -->
